@@ -1,0 +1,149 @@
+/* Footer Styling */
+.footer {
+  background: #014a94; /* Consistent Navy Blue */
+  color: white;
+  padding: 20px 10px;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+/* Left Section: Logo & Navigation */
+.footer-left {
+  padding-right: 30px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  width: 100px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  padding-right: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #ff3b3b; /* Yellow */
+}
+
+/* Center Section: Social Media & Contact */
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+  text-align: center;
+  padding-right: 90px;
+}
+
+/* Social Media Icons */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.social-icon {
+  font-size: 1.8rem;
+  color: white;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  color: #ff3b3b; /* Yellow */
+  transform: scale(1.2);
+}
+
+/* Contact Information */
+.footer-contact {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.footer-contact h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #ff3b3b; /* Yellow */
+}
+
+.footer-contact p {
+  font-size: 1.2rem;
+  margin: 3px 0;
+}
+
+/* Copyright */
+.footer-bottom {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Right Section: Google Map */
+.footer-right {
+  width: 30%;
+  max-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 20px;
+  }
+
+  .footer-left {
+    align-items: center;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-socials {
+    flex-wrap: wrap;
+  }
+
+  .footer-contact h3 {
+    font-size: 1.3rem;
+  }
+
+  .footer-contact p {
+    font-size: 1rem;
+  }
+}

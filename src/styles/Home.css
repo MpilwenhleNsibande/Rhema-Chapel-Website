@@ -1,0 +1,331 @@
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+
+/* Home Page Styling */
+.home {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.home-content {
+  width: 100%;
+  max-width: 2500px;
+}
+
+/* Section: Pastor */
+.pastor-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px 2%;
+  background: #014a94; /* Dark Blue */
+  max-width: 2500px;
+  margin-top: 40px;
+
+  width: 100%;
+}
+
+/* Pastor Box: Flexbox for Layout */
+.pastor-box {
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  background: rgba(1, 15, 44, 0.15);/*Slightlylighterforcontrast*/
+  padding: 30px;
+  border-radius:10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  animation: slideUp 1.5s ease-in-out;
+  max-width: 2000px;
+  width: 100%;
+  /*Setmaxwidthforresponsiveness*/width: 100%;
+  -webkit-border-radius:10p;
+  -moz-border-radius:10p;
+  -ms-border-radius:10p;
+  -o-border-radius:10p;
+}
+
+/* Image inside the text box */
+.pastor-image {
+  width: 220px;
+  height: 280px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 4px solid #ff3b3b; /* Red */
+  margin-right: 20px;
+}
+
+/* Pastor Box: Flexbox for Layout */
+.pastor-box {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  background: rgba(1, 15, 44, 0.15); /* Slightly lighter for contrast */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  animation: slideUp 1.5s ease-in-out;
+  max-width: 2000px; /* Set max width for responsiveness */
+  width: 100%;
+}
+
+/* Image inside the text box */
+.pastor-image {
+  width: 220px;
+  height: 280px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 4px solid #ff3b3b; /* Red */
+  margin-right: 20px;
+}
+
+/* Pastor Text */
+.pastor-text {
+  flex: 1; /* Allows text to take up remaining space */
+}
+
+.pastor-text h2 {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.pastor-text p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: white;
+  text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pastor-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pastor-image {
+    margin: 0 0 20px 0; /* Center image above text */
+  }
+}
+
+/* Blue Separator Line */
+.separator {
+  width: 100%;
+  height: 5px;
+  background-color: navy;
+  margin: 40px 0;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+/* Integrity Section */
+.integrity-section {
+  display: flex;
+  justify-content: center;
+  padding: 30px 2%;
+  background: #014a94; /* Red background */
+  max-width: 100%; /* Ensure no overflow */
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 40px;
+  margin-top: 5px;
+}
+
+/* Integrity Box: Flexbox for Layout */
+.integrity-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(1, 15, 44, 0.15); /* Slightly lighter for contrast */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  animation: slideUp 1.5s ease-in-out;
+  width: 100%;
+  max-width: 600px; /* Control width for larger screens */
+}
+
+/* Heading Styles */
+.integrity-box h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+/* Paragraph Styles */
+.integrity-box p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: white;
+  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+  max-width: 100%; /* Allow text to be responsive */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .integrity-box {
+    padding: 20px;
+  }
+
+  .integrity-box h2 {
+    font-size: 2rem;
+  }
+
+  .integrity-box p {
+    font-size: 1rem;
+  }
+}
+
+/* Services Section */
+.services-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: #014a94;
+}
+
+.services-section h2{
+  color: rgb(5, 5, 62);;
+}
+
+.services-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.service-box {
+  width: 250px;
+  padding: 20px;
+  background: rgb(203, 222, 250);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-size: 40px;
+  color: #4730f1;
+  margin-bottom: 10px;
+}
+
+.service-box h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: rgb(5, 5, 62);
+  font-weight: bold;
+}
+
+.service-box p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Word of the Year Section */
+.word-of-the-year {
+  display: flex;
+  justify-content: center;
+  padding: 60px 2%;
+  background: #014a94; /* Navy Blue */
+  max-width: 100%;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 90px;
+  width: 100%;
+}
+
+/* Word Box */
+.word-box {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  background: rgba(1, 15, 44, 0.15); /* Transparent Navy */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  animation: slideUp 1.5s ease-in-out;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Image Styling */
+.word-image {
+  width: 220px;
+  height: 280px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 4px solid #ff3b3b; /* Red */
+  margin-right: 20px;
+}
+
+/* Word Text */
+.word-text {
+  flex: 1;
+}
+
+.word-text h2 {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 10px;
+
+}
+
+.word-text p {
+  font-size: 0.8rem;
+  line-height: 1;
+  color: white;
+  text-align: justify;
+}
+
+/* Learn More Button */
+.learn-more-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #ff3b3b; /* Red */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.learn-more-btn:hover {
+  background: #d32f2f; /* Darker red */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .word-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .word-image {
+    margin: 0 0 20px 0;
+  }
+}
+

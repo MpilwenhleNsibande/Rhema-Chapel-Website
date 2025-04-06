@@ -1,0 +1,106 @@
+/* Header Section */
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 2rem;
+  margin-top: 80px;
+  overflow: hidden; /* Prevent unwanted scrolling */
+}
+
+/* Dark overlay for better text readability */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(223, 215, 215, 0.9);
+  z-index: 1; /* Ensures overlay is on top of background */
+}
+
+/* Centered Content */
+.header-content {
+  position: relative;
+  max-width: 90%;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  padding-bottom: 6rem;
+  z-index: 2; /* Ensures text is above overlay */
+}
+
+/* Slide-up effect for heading */
+.header-content h1 {
+  font-size: clamp(2rem, 5vw, 5rem); /* Responsive font size */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 1.5s ease-in-out forwards;
+}
+
+/* Typing effect for subheading */
+.header-content h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+  width: 0;
+  animation: typing 3s steps(40, end) forwards, blink 0.8s infinite;
+}
+
+/* Fade-in effect for paragraph */
+.header-content p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out 1.5s forwards;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Fully Responsive Design */
+@media (max-width: 1024px) {
+  .header-content { padding: 0 1.5rem; }
+}
+
+@media (max-width: 768px) {
+  .header { height: 90vh; }
+  .header-content { padding: 0 1rem; }
+}
+
+@media (max-width: 480px) {
+  .header { height: 80vh; padding: 0 1rem; }
+  .header-content h2 { font-size: 1.2rem; }
+  .header-content p { font-size: 1rem; }
+}

@@ -1,0 +1,151 @@
+/* Container Styling */
+.golive-page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+    backdrop-filter: brightness(0.8);
+    
+  }
+  
+  /* Go Live Button */
+  .go-live-button {
+    padding: 1.2rem 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: white;
+    color: white;
+    background-color: #d80d1e;
+    border-radius: 40px;
+    box-shadow: 0 10px 25px rgba(230, 57, 70, 0.6);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    animation: pulse 2s infinite;
+  }
+  
+  .go-live-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 100, 100, 0.7);
+    
+  }
+  
+  /* Live State Heartbeat Animation */
+  .live {
+    background-color: #ff0033;
+    animation: heartbeat 1.2s infinite;
+  }
+  
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+  }
+  
+  /* Schedule Popup */
+  .schedule-popup {
+    margin-top: 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    max-width: 90%;
+  }
+  
+  .schedule-popup h4 {
+    font-size: 1.8rem;
+    color: #ffd700;
+    margin-bottom: 1rem;
+  }
+  
+  .schedule-popup ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .schedule-popup li {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #f1f1f1;
+  }
+  
+  .schedule-popup p {
+    color: #ccc;
+    font-style: italic;
+  }
+  
+  .schedule-popup button {
+    margin-top: 1.5rem;
+    background-color: #00b4d8;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .schedule-popup button:hover {
+    background-color: #0077b6;
+  }
+  
+  /* FB Embed Container */
+  .live-embed-container {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 720px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .fb-watch-button {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #4267B2;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .fb-watch-button:hover {
+    background-color: #365899;
+  }
+  
+  /* Animations */
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); }
+    50% { box-shadow: 0 0 30px rgba(255, 0, 0, 0.8); }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .go-live-button {
+      font-size: 1.2rem;
+      padding: 1rem 2.5rem;
+    }
+  
+    .schedule-popup {
+      font-size: 0.95rem;
+      padding: 1.2rem;
+    }
+  
+    .live-embed-container iframe {
+      height: 300px;
+    }
+  }
+  
