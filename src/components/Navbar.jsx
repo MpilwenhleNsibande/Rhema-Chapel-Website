@@ -22,14 +22,18 @@ const Navbar = () => {
         <div className={`bar ${menuOpen ? "open" : ""}`}></div>
       </div>
 
+      {/* Mobile Dropdown Button */}
+      <button className={`mobile-dropdown-btn ${menuOpen ? 'show' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
+        
+      </button>
+
       {/* Navigation Links */}
       <ul className={`nav-links ${menuOpen ? "show" : ""}`}>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
-        
 
         {/* EIWM Arms Dropdown */}
-        <li 
+        <li
           className="dropdown"
           onMouseEnter={() => setDropdownOpen(true)}
           onMouseLeave={() => setDropdownOpen(false)}
@@ -49,7 +53,6 @@ const Navbar = () => {
         <li><Link to="/events">Events</Link></li>
         <li><Link to="/sermons">Sermons</Link></li>
         <li><Link to="/goLive">Go Live</Link></li>
-        
       </ul>
     </nav>
   );
