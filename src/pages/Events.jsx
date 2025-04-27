@@ -15,17 +15,18 @@ import churchImg from '../assets/church10.jpeg';
 
 // Mock events data (10 events)
 const events = [
-  { title: "Easter Celebration", description: "Join us for a joyful Easter gathering filled with fun activities, inspiring messages, and a warm community atmosphere." },
-  { title: "Spring Festival", description: "Celebrate the season of renewal with music, food, and games for the whole family to enjoy!" },
-  { title: "Community Outreach", description: "A day dedicated to giving back. Volunteer with us to make a positive impact in the community." },
-  { title: "Annual Church Anniversary", description: "Celebrate the founding of the church with special services and guest ministers." },
-  { title: "Revival Night", description: "A night of intense worship, prophecy, and spiritual renewal." },
-  { title: "Youth Conference", description: "Empowering young people through workshops, seminars, and fun activities." },
-  { title: "Women’s Retreat", description: "A peaceful retreat for women to focus on spiritual growth and relaxation." },
-  { title: "Men’s Conference", description: "A weekend conference dedicated to spiritual growth and leadership for men." },
-  { title: "Christmas Concert", description: "Celebrate the season with music, drama, and a festive atmosphere." },
-  { title: "New Year’s Eve Celebration", description: "Ring in the New Year with a vibrant celebration and prophetic service." }
+  { title: "January Fast", description: "A time of spiritual renewal and growth as we fast and pray to seek God’s guidance and strength for the year ahead." },
+  { title: "Children's Church Teachers' Retreat / Workshop", description: "A training and refreshment event for children’s church teachers to enhance their teaching skills and spiritual development." },
+  { title: "Ministers Wives' Retreat", description: "A retreat dedicated to the wives of ministers, focusing on spiritual rejuvenation, personal growth, and relaxation." },
+  { title: "Easter Faith Convention", description: "A special convention held during Easter to celebrate the resurrection of Christ with powerful services and impactful messages." },
+  { title: "Mid-Year Fasting", description: "A time of fasting and prayer in the middle of the year to reconnect with God, seek divine direction, and experience spiritual breakthroughs." },
+  { title: "Children's Continental Outreach", description: "A children’s event aimed at reaching out to young hearts across continents with fun activities, educational workshops, and spiritual teachings." },
+  { title: "Church Worker's Congress", description: "A conference for church workers to deepen their understanding of their roles, develop new skills, and be spiritually refreshed." },
+  { title: "Intercessor's Congress", description: "A conference focused on intercessory prayer and spiritual empowerment for intercessors to grow in their calling and leadership." },
+  { title: "Pulpit Exchange", description: "A special event where ministers exchange pulpits to foster unity, broaden perspectives, and deliver diverse messages to congregations." },
+  { title: "Prayer Summit", description: "An intense time of prayer and worship where believers come together to seek God's will and experience spiritual renewal." }
 ];
+
 
 const images = [
   celebrationImg,
