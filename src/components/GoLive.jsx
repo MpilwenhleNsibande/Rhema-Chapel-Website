@@ -77,15 +77,15 @@ const GoLiveButton = () => {
       {showSchedule && (
         <div className="schedule-popup">
           <h4>📅 Weekly Live Streaming Schedule</h4>
-          <p>Join us during these times for live services:</p>
+          <p>Join us during these times for our live streamed services:</p>
           <ul>
-            <li>📖 Sunday Celebration Service:</li>
+            <li>Sunday Celebration Service:</li>
             <p>Sunday 10h00 - 12h00</p>
-            <li>🎓 Young Minister Teaching School: </li>
+            <li>Young Minister Teaching School: </li>
             <p>Wed 17h30 - 19h30</p>
-            <li>🌙 All Night Prayer: </li>
+            <li>All Night Prayer: </li>
             <p>Friday 22h00 - 03h00</p>
-            <li>💥 Victory Hour Prayer: </li>
+            <li>Victory Hour Prayer: </li>
             <p>Friday 17h30 - 19h30</p>
           </ul>
           <button onClick={handleClose}>Got it</button>

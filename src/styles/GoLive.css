@@ -61,7 +61,7 @@
   
   .schedule-popup h4 {
     font-size: 1.8rem;
-    color: #ffd700;
+    color: #ff3b3b;
     margin-bottom: 1rem;
   }
   
@@ -83,7 +83,7 @@
   
   .schedule-popup button {
     margin-top: 1.5rem;
-    background-color: #00b4d8;
+    background-color: #0077b6;
     color: white;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -94,7 +94,7 @@
   }
   
   .schedule-popup button:hover {
-    background-color: #0077b6;
+    background-color:#ff3b3b;
   }
   
   /* FB Embed Container */

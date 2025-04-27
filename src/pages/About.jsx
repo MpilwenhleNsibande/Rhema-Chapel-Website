@@ -3,14 +3,14 @@ import '../styles/About.css';
 import founderImg from '../assets/founder.jpg'; // Ensure the image exists
 import backgroundImg from '../assets/church6.jpeg'; // Ensure the image exists
 import { FaBookOpen, FaGlobe, FaMusic, FaUsers, FaGraduationCap, FaShieldAlt } from 'react-icons/fa';
-import hod1 from '../assets/hod1.png'; 
+import hod1 from '../assets/mam.png'; 
 import hod2 from '../assets/lebo.png';
-import hod3 from '../assets/hod3 (2).png';
-import hod4 from '../assets/hod4.png';
-import hod5 from '../assets/ann_3.png';
-import hod6 from '../assets/peter.png';
-import hod7 from '../assets/hod7.png';
-import hod8 from '../assets/mandy.png';
+import hod3 from '../assets/nkuna.png';
+import hod4 from '../assets/mike.png';
+import hod5 from '../assets/ann.png';
+import hod6 from '../assets/p.png';
+import hod7 from '../assets/victor.png';
+import hod8 from '../assets/mandla.png';
 import hod10 from '../assets/tolu.png';
 import hod9 from '../assets/hod9.png';
 
@@ -28,7 +28,7 @@ const departments = [
     hod: "Mrs Lebogang Mpela",
     ahod: "None",
     image: hod2,
-    description: "Manages the church's audio-visuals, livestreaming, and technical support for all events and services."
+    description: "The Teenagers Fellowship Department is committed to guiding and nurturing the spiritual, emotional, and social growth of teenagers within the church. We provide a safe and supportive environment where teens can explore their faith, develop godly character, and build lasting friendships. Through regular fellowship meetings, Bible studies, activities, and youth events, we engage teenagers in meaningful discussions and teachings that are relevant to their lives. Our department also offers opportunities for leadership development, helping teens discover and develop their gifts and talents for service within the church and beyond. We aim to create a community that empowers young people to live out their faith boldly and confidently, while providing the support they need as they navigate the challenges of adolescence. The Teenagers Fellowship Department is dedicated to equipping the next generation to grow in Christ and fulfill their God-given purpose."
   },
   {
     name: "Intercessory Department",
@@ -59,7 +59,7 @@ const departments = [
     hod: "Brother Peter Bless",
     ahod: "None",
     image: hod6,
-    description: "Welcomes members and visitors, ensures order during services, and provides assistance to congregants."
+    description: "The Couples Fellowship Department is dedicated to nurturing and strengthening marital relationships within the church community. We provide support, encouragement, and resources to married couples, helping them to grow together in faith and build strong, biblical marriages. Through regular fellowship meetings, activities, and special events, we create a platform for couples to connect, share experiences, and receive guidance on family life, all aimed at fostering healthy and thriving relationships. Our focus is on creating a supportive environment where couples can grow spiritually and emotionally, strengthening their bond both with each other and with God. The Maintenance Department is responsible for the upkeep and care of the church’s physical facilities, ensuring that they are safe, clean, and well-maintained for all services and events. We oversee the management of utilities such as electricity and water, as well as performing necessary repairs and improvements to the building. Our team works diligently to address maintenance issues promptly, ensuring that the church environment remains welcoming and conducive to worship. By maintaining the church’s infrastructure, we create a space where the congregation can gather in comfort and focus on spiritual growth."
   },
 
   {
@@ -75,7 +75,7 @@ const departments = [
     hod: "Brother Mandla Sithole",
     ahod: "Sister Lebogang Matabula",
     image: hod8,
-    description: "Welcomes members and visitors, ensures order during services, and provides assistance to congregants."
+    description: "The Technical and Media Department plays a vital role in ensuring that all technical and media aspects of the church’s services and programs run smoothly. Our team is responsible for managing audio-visual systems, including sound, lighting, and video equipment, to create a high-quality worship experience for the congregation. We ensure that all presentations, such as songs, sermons, and announcements, are delivered seamlessly through screens and speakers during services and events. In addition to technical support, the department oversees the recording and live streaming of services, making sure that those unable to attend in person can still participate in the worship experience remotely. We also handle the production of media content, including the creation of promotional materials, video clips, and other multimedia resources used in church services and outreach activities. Our team ensures that all equipment is properly maintained and prepared before every service and event, troubleshooting and resolving any technical issues that may arise. We are committed to supporting the church’s mission through the effective use of technology, ensuring that the media experience is professional, impactful, and accessible to all. Additionally, the department assists with any media-related needs for special programs, conferences, and outreach events, contributing to the overall success of the church’s communication efforts."
   },
 
   {
@@ -83,7 +83,7 @@ const departments = [
     hod: " Sister Tolu Akinyele",
     ahod: "None",
     image: hod10,
-    description: "The Ushering Department plays a crucial role in ensuring order, hospitality, and smooth coordination during all church services and programs. Ushers are responsible for guiding congregants to their seats and taking accurate headcounts at every service. They distribute service bulletins, handbills, and other materials as needed, and assist in handing out items during services as directed from the pulpit. Prior to each service, ushers ensure that the auditorium is clean and the seating is properly arranged. They also support the Welfare Department in serving meals, drinks, and other items during special ceremonies or programs. The department is entrusted with the collection of tithes, offerings, pledges, and other contributions during services, which are promptly handed over to the Treasury Department for counting. Additionally, ushers are responsible for collecting and safeguarding lost and forgotten items, ensuring they are returned to their rightful owners through the Chapel Office. Ushers also assist ministers during ministrations by maintaining order and ensuring the safety of individuals being ministered to, thereby upholding a respectful and secure worship environment."
+    description: "The Ushering Department is dedicated to ensuring a smooth and welcoming experience for all attendees during church services and programs. Our team ushers congregants to their seats and takes the numerical headcount of attendees at every service. We distribute service bulletins, handbills, and special handouts as needed, and assist with the distribution of items during the service as directed from the pulpit. We are committed to maintaining a clean and organized auditorium, ensuring that seats are properly arranged before every service. In addition, we work closely with the Welfare Department to assist with the distribution and serving of meals, drinks, and other items during ceremonies, services, or special programs. The department is also responsible for the collection of tithes, offerings, pledges, and other contributions during services, ensuring that all collections are handed over immediately to the Treasury Department for counting. After every service, we gather any lost or forgotten items and safely store them in the Chapel Office for later return to their rightful owners. During ministrations, we provide support to the ministers by helping to ensure the safety of those being ministered to, preventing any injury to themselves or others. Our role is integral in maintaining an orderly and respectful atmosphere throughout the church's activities."
   },
 
   {
