@@ -40,7 +40,7 @@
 
 /* Slide-up effect for heading */
 .header-content h1 {
-  font-size: clamp(2rem, 5vw, 5rem); /* Responsive font size */
+  font-size: clamp(3rem, 6vw, 6rem); /* Responsive font size */
   font-weight: bold;
   margin-bottom: 0.5rem;
   opacity: 0;
@@ -51,7 +51,7 @@
 /* Typing effect for subheading */
 .header-content h2 {
   color: #007bff;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: bold;
   margin-bottom: 0.5rem;
   white-space: nowrap;
@@ -63,7 +63,7 @@
 
 /* Fade-in effect for paragraph */
 .header-content p {
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(2rem, 3vw, 2rem);
   max-width: 800px;
   margin: 0 auto;
   opacity: 0;
@@ -104,6 +104,7 @@
 
 @media (max-width: 480px) {
   .header { height: 80vh; padding: 0 1rem; }
-  .header-content h2 { font-size: 1.2rem; }
-  .header-content p { font-size: 1rem; }
+  .header-content h1{ font-size:3.5rem;}
+  .header-content h2 { font-size: 1.6rem; }
+  .header-content p { font-size: 1.4rem; }
 }

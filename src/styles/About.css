@@ -507,8 +507,16 @@
   @media (max-width: 768px) {
     .department-text {
       text-align: left;
-      margin-right: 20px;
-      margin-left: 20px;
+      margin-right: 50px;
+      margin-left: 50px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .department-text {
+      text-align: left;
+      margin-right: 50px;
+      margin-left: 50px;
     }
   }
 
