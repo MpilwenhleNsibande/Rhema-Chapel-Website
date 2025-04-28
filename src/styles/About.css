@@ -507,7 +507,8 @@
   @media (max-width: 768px) {
     .department-text {
       text-align: left;
-      margin: 0 10px;
+      margin-right: 40px;
+      margin-left: 40px;
     }
   }
 
