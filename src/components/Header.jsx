@@ -43,7 +43,7 @@ const Header = () => {
       <div className="overlay"></div>
       <div className="header-content">
         <h1>Welcome to</h1>
-        <h2>Rhema Chapel International <br/>Churches <br /> (Pretoria)</h2>
+        <h2>Rhema Chapel <br/>International Churches <br /> (Pretoria)</h2>
         <p>The Home of the blessed people, a people of the Word changing their World</p>
       </div>
     </header>
