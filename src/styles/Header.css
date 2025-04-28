@@ -99,7 +99,7 @@
 
 @media (max-width: 768px) {
   .header { height: 90vh; }
-  .header-content h2 { padding-right: 2rem; }
+  .header-content h2 { margin-right: 2rem; }
 }
 
 @media (max-width: 480px) {
