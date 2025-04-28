@@ -133,6 +133,12 @@
     .banner {
       height: 250px;
     }
+
+    .contact-info {
+      width: 90%;         /* On smaller screens, make it responsive */
+      font-size: 13px;
+      padding: 8px;
+    }
   
     .banner-text {
       font-size: 1.6rem;

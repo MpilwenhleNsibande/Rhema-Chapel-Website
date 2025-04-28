@@ -50,6 +50,7 @@
 
 /* Typing effect for subheading */
 .header-content h2 {
+  color: #007bff;
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -67,6 +68,8 @@
   margin: 0 auto;
   opacity: 0;
   animation: fadeIn 3s ease-in-out 1.5s forwards;
+  color: #ff3b3b;
+  font-weight: bold;
 }
 
 /* Keyframes for animations */
@@ -96,7 +99,7 @@
 
 @media (max-width: 768px) {
   .header { height: 90vh; }
-  .header-content { padding: 0 1rem; }
+  .header-content h2 { padding-right: 2rem; }
 }
 
 @media (max-width: 480px) {
