@@ -507,8 +507,8 @@
   @media (max-width: 768px) {
     .department-text {
       text-align: left;
-      margin-right: 40px;
-      margin-left: 40px;
+      margin-right: 20px;
+      margin-left: 20px;
     }
   }
 
@@ -538,5 +538,10 @@
       margin-right: 25px;
       color: white; 
       animation: slideIn 1.5s ease-in-out;
+    }
+
+    .department-box{
+      margin-left: 40px;
+      margin-right: 40px;
     }
   }
