@@ -28,7 +28,11 @@
   .logo-text {
     font-size: 1.05rem;
     letter-spacing: 1px;
+<<<<<<< HEAD
     color: rgb(7, 7, 70);
+=======
+    color: rgb(214, 214, 228);
+>>>>>>> 4c1284a (Update project with latest changes)
     padding-left: 20px;
   }
   

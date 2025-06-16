@@ -2,8 +2,13 @@ import React, { useState, useEffect } from "react";
 import "../styles/Sermons.css";
 
 const API_KEY = "AIzaSyCHSFNN0T8FaV2CygLCEizoR0MxyELKrQw";
+<<<<<<< HEAD
 const CHANNEL_ID = "UCrbppQg8Drn3tmypvRdkq9Q"; 
 const MAX_RESULTS = 10; 
+=======
+const CHANNEL_ID = "UCrbppQg8Drn3tmypvRdkq9Q";
+const MAX_RESULTS = 10;
+>>>>>>> 4c1284a (Update project with latest changes)
 
 const Sermons = () => {
   const [sermons, setSermons] = useState([]);
@@ -26,6 +31,7 @@ const Sermons = () => {
 
   return (
     <div className="sermons-page">
+<<<<<<< HEAD
       <h1 className="sermons-title">Latest Sermons</h1>
       <p className="sermons-subtitle">Watch our latest messages from Rhema Chapel</p>
       <div className="sermons-container">
@@ -41,6 +47,33 @@ const Sermons = () => {
             <p className="sermon-date">
               {new Date(sermon.snippet.publishedAt).toDateString()}
             </p>
+=======
+      <header className="sermons-header">
+        <h1 className="sermons-title">Latest Sermons</h1>
+        <p className="sermons-subtitle">Watch our latest messages from Rhema Chapel (Pretoria)</p>
+      </header>
+      <div className="sermons-container">
+        {sermons.map((sermon) => (
+          <div key={sermon.id.videoId} className="sermon-card">
+            <div className="sermon-video-wrapper">
+              <iframe
+                src={`https://www.youtube.com/embed/${sermon.id.videoId}`}
+                title={sermon.snippet.title}
+                allowFullScreen
+                className="sermon-video"
+              ></iframe>
+            </div>
+            <div className="sermon-info">
+              <h3 className="sermon-title">{sermon.snippet.title}</h3>
+              <p className="sermon-date">
+                {new Date(sermon.snippet.publishedAt).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </p>
+            </div>
+>>>>>>> 4c1284a (Update project with latest changes)
           </div>
         ))}
       </div>

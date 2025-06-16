@@ -1,6 +1,10 @@
 import React from "react";
 import "../styles/EIWMArms.css";
+<<<<<<< HEAD
 import ymtsImage from "../assets/bible.jpg";
+=======
+import ymtsImage from "../assets/fc_2.jpg";
+>>>>>>> 4c1284a (Update project with latest changes)
 
 const YMTS = () => {
   return (

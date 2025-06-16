@@ -1,6 +1,10 @@
 import React from "react";
 import "../styles/EIWMArms.css"; // Shared CSS file for all Arms
+<<<<<<< HEAD
 import chapelImage from "../assets/background.jpg";; // Ensure this image exists
+=======
+import chapelImage from "../assets/church_sit.jpg";; // Ensure this image exists
+>>>>>>> 4c1284a (Update project with latest changes)
 
 const RhemaChapel = () => {
   return (

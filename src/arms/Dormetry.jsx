@@ -1,6 +1,10 @@
 import React from "react";
 import "../styles/EIWMArms.css";
+<<<<<<< HEAD
 import bannerImage from "../assets/background.jpg"; // Add the actual image file
+=======
+import bannerImage from "../assets/dorm.jpg"; // Add the actual image file
+>>>>>>> 4c1284a (Update project with latest changes)
 
 const Dormitory = () => {
   return (

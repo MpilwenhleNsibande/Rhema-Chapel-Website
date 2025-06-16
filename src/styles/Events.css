@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Background color for the entire page */
 .events-page {
   background-color: #001f3f; /* Dark Navy */
@@ -22,10 +23,25 @@
   color: white; /* Navy */
   position: relative;
   margin-top: 70px;
+=======
+.events-page {
+  padding: 40px 20px;
+  background: #fdfdfd;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #222;
+  position: relative;
+>>>>>>> 4c1284a (Update project with latest changes)
 }
 
 .section-title::after {
   content: '';
+<<<<<<< HEAD
   display: block;
   width: 80px;
   height: 3px;
@@ -46,10 +62,34 @@
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+=======
+  width: 60px;
+  height: 3px;
+  background: #9e1b32;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+/* Events Grid */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.event-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+>>>>>>> 4c1284a (Update project with latest changes)
   transition: transform 0.3s ease;
 }
 
 .event-card:hover {
+<<<<<<< HEAD
   transform: scale(1.05);
 }
 
@@ -94,11 +134,54 @@
   overflow-x: auto;
   gap: 20px;
   scroll-behavior: smooth;
+=======
+  transform: scale(1.02);
+}
+
+.event-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hover Overlay */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  width: 100%;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.event-card:hover .overlay {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.event-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Gallery */
+.gallery-section {
+  margin-top: 60px;
+}
+
+.gallery-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 20px;
+>>>>>>> 4c1284a (Update project with latest changes)
 }
 
 .gallery-track {
   display: flex;
   gap: 20px;
+<<<<<<< HEAD
   min-width: max-content;
 }
 
@@ -115,10 +198,27 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+=======
+  animation: scroll-left 30s linear infinite;
+}
+
+.gallery-slide {
+  flex: 0 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gallery-slide img {
+  width: 320px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+>>>>>>> 4c1284a (Update project with latest changes)
   transition: transform 0.3s ease;
 }
 
 .gallery-slide:hover img {
+<<<<<<< HEAD
   transform: scale(1.1);
 }
 
@@ -153,5 +253,29 @@
   .gallery-slide {
     width: 180px;
     height: 120px;
+=======
+  transform: scale(1.05);
+}
+
+/* Gallery Scroll Animation */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .event-image {
+    height: 220px;
+  }
+
+  .event-title {
+    font-size: 1rem;
+  }
+
+  .gallery-slide img {
+    width: 260px;
+    height: 160px;
+>>>>>>> 4c1284a (Update project with latest changes)
   }
 }
