@@ -1,142 +1,58 @@
-<<<<<<< HEAD
-/* Sermons Page Styles */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
 .sermons-page {
-  margin-top: 50px;
-  text-align: center;
-  padding: 50px 10%;
-  background: #001f3f; /* Dark Blue */
+  background: linear-gradient(135deg, #001f3f, #000a1a);
   min-height: 100vh;
+  padding: 60px 20px;
+  color: #ffe3d1;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.sermons-header {
+  margin-bottom: 50px;
 }
 
 .sermons-title {
-  font-size: 2.5rem;
-  color: #ff3b3b; /* Gold */
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #ff5f13;
+  text-shadow: 0 0 10px #e50914;
   margin-bottom: 10px;
 }
 
 .sermons-subtitle {
   font-size: 1.2rem;
-  color: #ffffff;
-  margin-bottom: 40px;
-}
-
-.sermons-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.sermon-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
-  text-align: center;
-}
-
-.sermon-video {
-  width: 100%;
-  height: 200px;
-  border-radius: 10px;
-}
-
-.sermon-title {
-  font-size: 1.4rem;
-  color: white;
-  margin-top: 10px;
-}
-
-.sermon-date {
-  font-size: 1rem;
-  color: #ffcc00;
-  margin-top: 5px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .sermons-page {
-    padding: 30px 5%;
-  }
-
-  .sermons-title {
-    font-size: 2rem;
-  }
-
-  .sermon-video {
-    height: 180px;
-  }
-}
-
-@media (max-width: 480px) {
-  .sermon-video {
-    height: 160px;
-  }
-
-  .sermons-title {
-    font-size: 1.8rem;
-  }
-
-  .sermon-subtitle {
-    font-size: 1rem;
-  }
-=======
-.sermons-page {
-  padding: 3rem 2rem;
-  background-color: #f9f9f9;
-  font-family: 'Segoe UI', 'Roboto', sans-serif;
-}
-
-.sermons-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('/path-to-banner-image.jpg') center/cover;
-  padding: 3rem 1rem;
-  color: #fff;
-  border-radius: 12px;
-}
-
-.sermons-title {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-.sermons-subtitle {
-  font-size: 1.3rem;
-  font-weight: 300;
-  color: #eaeaea;
+  color: #f1c7a7;
+  text-shadow: 0 0 6px rgba(229, 9, 20, 0.6);
 }
 
 .sermons-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  padding: 0 1rem;
+  gap: 32px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .sermon-card {
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background: #04192d;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.4);
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .sermon-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px #e50914;
 }
 
 .sermon-video-wrapper {
   position: relative;
-  padding-top: 56.25%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
   overflow: hidden;
+  border-radius: 15px 15px 0 0;
 }
 
 .sermon-video {
@@ -146,21 +62,39 @@
   width: 100%;
   height: 100%;
   border: none;
+  border-radius: 15px 15px 0 0;
 }
 
 .sermon-info {
-  padding: 1.5rem;
+  padding: 16px 20px 24px;
+  text-align: left;
 }
 
 .sermon-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #1a1a1a;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  color: #ff5f13;
+  margin: 0 0 8px;
+  text-shadow: 0 0 8px #e50914;
 }
 
 .sermon-date {
-  font-size: 0.95rem;
-  color: #777;
->>>>>>> 4c1284a (Update project with latest changes)
+  font-size: 0.9rem;
+  color: #f1c7a7;
+  text-shadow: 0 0 5px rgba(229, 9, 20, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sermons-title {
+    font-size: 2rem;
+  }
+
+  .sermon-title {
+    font-size: 1rem;
+  }
+
+  .sermons-subtitle {
+    font-size: 1rem;
+  }
 }

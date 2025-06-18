@@ -1,10 +1,6 @@
 import React from "react";
 import "../styles/EIWMArms.css";
-<<<<<<< HEAD
-import bannerImage from "../assets/background.jpg"; // Add the actual image file
-=======
-import bannerImage from "../assets/sun_sc.jpg"; // Add the actual image file
->>>>>>> 4c1284a (Update project with latest changes)
+import bannerImage from "../assets/sun_sc.jpg"; 
 
 const PreSchool = () => {
   return (

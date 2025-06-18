@@ -1,666 +1,228 @@
-html, body {
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-<<<<<<< HEAD
-=======
-  font-family: 'Poppins', sans-serif;
- 
->>>>>>> 4c1284a (Update project with latest changes)
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Playfair+Display&display=swap');
+
+.home-page {
+  background: linear-gradient(135deg, #001f3f, #000a1a);
+  color: #ffe3d1;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  overflow-x: hidden;
 }
 
-
-/* Home Page Styling */
-.home {
-  display: flex;
-  flex-direction:column;
-  align-items: center;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.home-content {
-  width: 100%;
-  max-width: 2500px;
-}
-
-/* Section: Pastor */
-.pastor-section {
-<<<<<<< HEAD
-  display: flex;
-  justify-content: center;
-  padding: 20px 2%;
-  background: #014a94; /* Dark Blue */
-  max-width: 2500px;
-  margin-top: 40px;
-
-  width: 100%;
-}
-
-/* Pastor Box: Flexbox for Layout */
-.pastor-box {
-  margin-right: 50px;
-  display: flex;
-  align-items: center;
-  text-align: left;
-  background: rgba(1, 15, 44, 0.15);/*Slightlylighterforcontrast*/
-  padding: 30px;
-  border-radius:10px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
-  animation: slideUp 1.5s ease-in-out;
-  max-width: 2000px;
-  width: 100%;
-  /*Setmaxwidthforresponsiveness*/width: 100%;
-  -webkit-border-radius:10p;
-  -moz-border-radius:10p;
-  -ms-border-radius:10p;
-  -o-border-radius:10p;
-}
-
-/* Image inside the text box */
-.pastor-image {
-  width: 220px;
-  height: 280px;
-  border-radius: 10px;
-  object-fit: cover;
-  border: 4px solid #ff3b3b; /* Red */
-  margin-right: 20px;
-}
-
-/* Pastor Box: Flexbox for Layout */
-.pastor-box {
-  display: flex;
-  align-items: center;
-  text-align: left;
-  background: rgba(1, 15, 44, 0.15); /* Slightly lighter for contrast */
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
-  animation: slideUp 1.5s ease-in-out;
-  max-width: 2000px; /* Set max width for responsiveness */
-  width: 100%;
-}
-
-/* Image inside the text box */
-.pastor-image {
-  width: 220px;
-  height: 280px;
-  border-radius: 10px;
-  object-fit: cover;
-  border: 4px solid #ff3b3b; /* Red */
-  margin-right: 20px;
-}
-
-/* Pastor Text */
-.pastor-text {
-  flex: 1; /* Allows text to take up remaining space */
-}
-
-.pastor-text h2 {
-  font-size: 1.5rem;
-  color: white;
-  margin-bottom: 10px;
-}
-
-.pastor-text p {
-  font-size: 0.8rem;
-  line-height: 1.6;
-  color: white;
-  text-align: justify;
-=======
-  background: #f4f8ff;
-  padding: 4rem 2rem;
-  display: flex;
-  justify-content: center;
-}
-
-.pastor-box {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  gap: 3rem;
-  align-items: flex-start;
-}
-
-.pastor-image-container {
-  flex: 1;
-  min-width: 280px;
-  max-width: 400px;
+/* Hero */
+.hero-section {
+  background: radial-gradient(circle at center, #e50914, transparent 70%);
   text-align: center;
-  margin-bottom: 1rem;
-
+  padding: 80px 20px;
+  animation: pulseGlow 6s ease-in-out infinite;
 }
-
-.pastor-image-full {
-  width: 260px;
-  height: 260px;
-  object-fit: cover;
-  object-position: top center;
-  border-radius: 50%;
-  border: 6px solid #fff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease-in-out;
-  background-color: #002244;
-}
-.pastor-image-full:hover {
-  transform: scale(1.05);
-}
-
-.pastor-name,
-.pastor-title {
-  font-family: 'Great Vibes', cursive;
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #222;
-  position: relative;
-  display: inline-block;
-  background: linear-gradient(to right, #ffffff 60%, #ffebee 100%);
-  padding: 0.2rem 0.8rem;
-  border-radius: 5px;
-}
-
-.pastor-name::first-letter,
-.pastor-title::first-letter {
-  font-size: 2rem;
-  color: #c1121f;
-  font-weight: bold;
-  float: left;
-  line-height: 1;
-  padding-right: 0.3rem;
-}
-
-
-.pastor-title {
-  font-size: 1rem;
-  color: #555;
-  font-style: italic;
-  margin-top: 0.2rem;
-}
-
-.pastor-text {
-  flex: 2;
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.8;
-}
-
-.pastor-text h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #002244;
-  position: relative;
-  text-align: left;
-}
-
-.pastor-text h2::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #ff3b3b;
-  margin-top: 0.5rem;
-}
-
-.pastor-text p {
-  margin-bottom: 1.2rem;
->>>>>>> 4c1284a (Update project with latest changes)
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .pastor-box {
-    flex-direction: column;
-<<<<<<< HEAD
-    text-align: center;
-  }
-
-  .pastor-image {
-    margin: 0 0 20px 0; /* Center image above text */
-  }
-}
-
-/* Blue Separator Line */
-.separator {
-  width: 100%;
-  height: 5px;
-  background-color: navy;
-  margin: 40px 0;
-  border-radius: 50%;
-  animation: pulse 2s infinite;
-}
-
-/* Integrity Section */
-.integrity-section {
-  display: flex;
-  justify-content: center;
-  padding: 30px 2%;
-  background: #014a94; /* Red background */
-  max-width: 100%; /* Ensure no overflow */
-  flex-wrap: wrap;
-  position: relative;
-  margin-bottom: 40px;
-  margin-top: 5px;
-}
-
-/* Integrity Box: Flexbox for Layout */
-.integrity-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background: rgba(1, 15, 44, 0.15); /* Slightly lighter for contrast */
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
-  animation: slideUp 1.5s ease-in-out;
-  width: 100%;
-  max-width: 600px; /* Control width for larger screens */
-}
-
-/* Heading Styles */
-.integrity-box h2 {
-  font-size: 2.5rem;
-  color: white;
-  margin-bottom: 20px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-}
-
-/* Paragraph Styles */
-.integrity-box p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: white;
-  font-style: italic;
-  font-family: 'Roboto', sans-serif;
-  max-width: 100%; /* Allow text to be responsive */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .integrity-box {
-    padding: 20px;
-  }
-
-  .integrity-box h2 {
-    font-size: 2rem;
-  }
-
-  .integrity-box p {
-    font-size: 1rem;
-  }
-}
-
-/* Services Section */
-.services-section {
-  text-align: center;
-  padding: 40px 20px;
-  background: #014a94;
-}
-
-.services-section h2{
-  color: rgb(5, 5, 62);
-=======
-    padding: 1.5rem;
-  }
-
-  .pastor-image-full {
-    border-radius: 20px; /* on smaller screens, remove circular look for better fit */
-  }
-
-  .pastor-text {
-    text-align: justify;
-  }
-}
-
-/* 🔵 Blue Separator Line */
-.blue-separator {
-  width: 100%;
-  height: 8px;
-  background: linear-gradient(to right, #002244, #c1121f, #ffa500);
-  margin: 3rem 0;
-  border-radius: 20px;
-}
-
-/* 🌍 Vision Section */
-.vision-section {
-  background: #ffffff;
-  padding: 4rem 2rem;
-  display: flex;
-  justify-content: center;
-}
-
-.vision-container {
-  background: #f4f8ff;
-  border-left: 6px solid #c1121f;
-  padding: 3rem;
-  border-radius: 20px;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  max-width: 1000px;
-}
-
-.vision-icon {
+.hero-section h1 {
+  font-family: 'Orbitron', sans-serif;
   font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #002244;
+  color: #ff5f13;
+  text-shadow: 0 0 8px #e50914;
 }
-
-.vision-container h2 {
-  font-size: 2rem;
-  color: #c1121f;
-  margin-bottom: 1rem;
-  font-family: 'Playfair Display', serif;
+.hero-section p {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  color: #ffe3d1;
 }
-
-.vision-container p {
-  font-size: 1.1rem;
-  color: #333;
-  font-style: italic;
-  line-height: 1.6;
-}
-
-/* 🕊️ Services Section */
-.services-section {
-  padding: 4rem 2rem;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-}
-
-.services-box {
-  background: #fefefe;
-  padding: 3rem;
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
-  max-width: 1200px;
-  width: 100%;
-  text-align: center;
-}
-
-.services-title {
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
-  font-family: 'Playfair Display', serif;
-  color: #002244;
-  position: relative;
-}
-
-.services-title::after {
-  content: '';
-  width: 80px;
-  height: 4px;
-  background: #c1121f;
-  display: block;
-  margin: 0.5rem auto;
->>>>>>> 4c1284a (Update project with latest changes)
-}
-
-.services-list {
-  display: flex;
-<<<<<<< HEAD
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+.hero-buttons {
   margin-top: 20px;
 }
-
-.service-box {
-  width: 250px;
-  padding: 20px;
-  background: rgb(203, 222, 250);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
+.btn {
+  margin: 0 10px;
+  padding: 12px 24px;
+  border: 2px solid #e50914;
+  background: transparent;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+  border-radius: 50px;
+  text-transform: uppercase;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.btn:hover {
+  background: #ff5f13;
+  box-shadow: 0 0 12px #e50914;
 }
 
-.service-box:hover {
-  transform: translateY(-5px);
-}
-
-.service-icon {
-  font-size: 40px;
-  color: #4730f1;
-  margin-bottom: 10px;
-}
-
-.service-box h3 {
-  font-size: 20px;
-  margin-bottom: 8px;
-  color: rgb(5, 5, 62);
-  font-weight: bold;
-}
-
-.service-box p {
-  font-size: 14px;
-  color: #555;
-}
-
-/* Word of the Year Section */
-.word-of-the-year {
-  display: flex;
-  justify-content: center;
-  padding: 60px 2%;
-  background: #014a94; /* Navy Blue */
-  max-width: 100%;
-  flex-wrap: wrap;
-  position: relative;
-  margin-top: 30px;
-  margin-bottom: 90px;
-  width: 100%;
-}
-
-/* Word Box */
-.word-box {
+/* Pastor */
+.pastor-section {
   display: flex;
   align-items: center;
-  text-align: left;
-  background: rgba(1, 15, 44, 0.15); /* Transparent Navy */
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
-  animation: slideUp 1.5s ease-in-out;
-  max-width: 1000px;
-  width: 100%;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
 }
 
-/* Image Styling */
-.word-image {
-  width: 220px;
-  height: 280px;
-  border-radius: 10px;
-  object-fit: cover;
-  border: 4px solid #ff3b3b; /* Red */
-  margin-right: 20px;
-}
-
-/* Word Text */
-.word-text {
-=======
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.service-card {
-  background: #f4f8ff;
-  border-radius: 15px;
-  padding: 2rem 1.5rem;
-  width: 250px;
-  text-align: center;
-  border-top: 4px solid #c1121f;
+.pastor-image-glow {
+  width: 350px;       /* bigger size */
+  height: 350px;      /* keep it a perfect circle */
+  border-radius: 50%;
+  border: 4px solid #ff5f13;
+  box-shadow: 0 0 25px #e50914;
+  object-fit: contain;  /* important: keeps image proportion */
   transition: transform 0.3s ease;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
 }
 
-.service-card:hover {
+.pastor-image-glow:hover {
   transform: scale(1.05);
 }
 
-.service-icon {
-  font-size: 2.5rem;
-  color: #002244;
-  margin-bottom: 1rem;
-}
 
-.service-card h3 {
-  font-size: 1.3rem;
-  color: #c1121f;
-  margin-bottom: 0.5rem;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.service-card p {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* 🌟 Word of the Year */
-.word-of-year {
-  background-color: #f4f8ff;
-  padding: 4rem 2rem;
-  display: flex;
-  justify-content: center;
-}
-
-.word-box {
-  display: flex;
-  flex-wrap: wrap;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  max-width: 1200px;
-  width: 100%;
-  align-items: flex-start;
-}
-
-.word-image {
-  width: 100%;
-  max-width: 450px;
-  object-fit: cover;
-  border-right: 4px solid #c1121f;
-  height: 100%; /* Take height of shortest sibling initially */
-  max-height: 500px; /* ✅ Set a max height to stop expansion */
-  flex-shrink: 0;
-}
-
-.word-text {
-  padding: 2rem;
->>>>>>> 4c1284a (Update project with latest changes)
+.pastor-text {
   flex: 1;
+  background: rgba(255, 95, 19, 0.08);
+  padding: 30px;  /* slightly more padding for bigger text */
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(229, 9, 20, 0.5);
 }
 
-.word-text h2 {
-<<<<<<< HEAD
-  font-size: 1rem;
-  color: white;
-  margin-bottom: 10px;
-
+.pastor-text h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.4rem;  /* increased from 1.9rem */
+  margin-bottom: 14px;
+  color: #ff5f13;
+  text-shadow: 0 0 8px #e50914;
 }
 
-.word-text p {
-  font-size: 0.8rem;
-  line-height: 1;
-  color: white;
-  text-align: justify;
+.pastor-text p {
+  font-size: 1.2rem;  /* increased from 1rem */
+  margin: 14px 0;
+  line-height: 1.5;
 }
 
-/* Learn More Button */
-.learn-more-btn {
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  background: #ff3b3b; /* Red */
-  color: white;
-  border: none;
-  border-radius: 8px;
+.read-more-btn {
+  background: transparent;
+  border: 2px solid #e50914;
+  color: #fff;
+  padding: 10px 20px; /* bigger button for bigger text */
+  border-radius: 50px;
   cursor: pointer;
-  transition: background 0.3s ease-in-out;
-}
-
-.learn-more-btn:hover {
-  background: #d32f2f; /* Darker red */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .word-box {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .word-image {
-    margin: 0 0 20px 0;
-  }
-}
-
-=======
-  font-size: 1.8rem;
-  font-family: 'Playfair Display', serif;
-  color: #002244;
-  margin-bottom: 1rem;
-}
-
-.word-text .highlight {
-  color: #c1121f;
-}
-
-.word-text .scripture {
+  font-family: 'Orbitron', sans-serif;
   font-size: 1rem;
-  font-style: italic;
-  color: #555;
-  display: block;
-  margin-top: 0.5rem;
-}
-
-.word-para {
-  color: #444;
-  font-size: 1rem;
-  margin-bottom: 1.2rem;
-  line-height: 1.8;
-}
-
-.learn-more-btn {
-  background-color: #c1121f;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.9rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  margin-top: 14px;
   transition: background 0.3s ease;
 }
 
-.learn-more-btn:hover {
-  background-color: #a10e18;
+.read-more-btn:hover {
+  background: #ff5f13;
 }
 
-@media (max-width: 768px) {
-  .services-list {
+
+/* Vision */
+.vision-section {
+  text-align: center;
+  margin: 60px 0;
+}
+.vision-icon {
+  font-size: 48px;
+  color: #ff5f13;
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+.vision-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  margin-top: 10px;
+  color: #ff5f13;
+}
+.vision-section p {
+  font-size: 1.1rem;
+}
+
+/* Services Grid */
+.services-section {
+  background: rgba(255,95,19,0.05);
+  padding: 40px 20px;
+  text-align: center;
+}
+.services-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  color: #ff5f13;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+.service-card {
+  background: rgba(255,255,255,0.1);
+  border: 2px solid #e50914;
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #e50914;
+}
+.service-icon {
+  font-size: 36px;
+  color: #ff5f13;
+}
+.service-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  margin-top: 10px;
+  color: #ffe3d1;
+}
+
+/* Word of the Year */
+.word-of-the-year {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  background: rgba(255,95,19,0.05);
+  border: 2px solid #e50914;
+  border-radius: 18px;
+}
+.word-image {
+  width: 300px;
+  border-radius: 12px;
+  border: 2px solid #e50914;
+}
+.word-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #ff5f13;
+}
+.highlight {
+  color: #ffe3d1;
+}
+.scripture {
+  font-style: italic;
+  color: #ffe3d1;
+}
+.word-para {
+  color: #fff;
+  margin: 15px 0;
+}
+.word-para.collapsed {
+  max-height: 4.5em;
+  overflow: hidden;
+}
+.word-para.expanded {
+  max-height: none;
+}
+
+/* Glow Animation */
+@keyframes pulseGlow {
+  0%,100% {opacity: 0.7;}
+  50% {opacity: 1;}
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .pastor-section, .word-of-the-year {
     flex-direction: column;
-    align-items: center;
-  }
-  .word-box {
-    flex-direction: column;
+    text-align: center;
   }
   .word-image {
-    max-width: 100%;
-    border-right: none;
-    border-bottom: 4px solid #c1121f;
+    width: 100%;
+    max-width: 400px;
   }
 }
->>>>>>> 4c1284a (Update project with latest changes)

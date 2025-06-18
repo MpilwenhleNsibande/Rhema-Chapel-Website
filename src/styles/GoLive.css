@@ -1,306 +1,250 @@
-<<<<<<< HEAD
-/* Container Styling */
-.golive-page-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    color: #fff;
-    box-sizing: border-box;
-    backdrop-filter: brightness(0.8);
-    
-  }
-  
-  /* Go Live Button */
-  .go-live-button {
-    padding: 1.2rem 3rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border: white;
-    color: white;
-    background-color: #d80d1e;
-    border-radius: 40px;
-    box-shadow: 0 10px 25px rgba(230, 57, 70, 0.6);
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    animation: pulse 2s infinite;
-  }
-  
-  .go-live-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(255, 100, 100, 0.7);
-    
-  }
-  
-  /* Live State Heartbeat Animation */
-  .live {
-    background-color: #ff0033;
-    animation: heartbeat 1.2s infinite;
-  }
-  
-  @keyframes heartbeat {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.15); }
-  }
-  
-  /* Schedule Popup */
-  .schedule-popup {
-    margin-top: 2rem;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
-    animation: fadeIn 1s ease-in-out;
-    max-width: 90%;
-  }
-  
-  .schedule-popup h4 {
-    font-size: 1.8rem;
-    color: #ff3b3b;
-    margin-bottom: 1rem;
-  }
-  
-  .schedule-popup ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .schedule-popup li {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-    color: #f1f1f1;
-  }
-  
-  .schedule-popup p {
-    color: #ccc;
-    font-style: italic;
-  }
-  
-  .schedule-popup button {
-    margin-top: 1.5rem;
-    background-color: #0077b6;
-    color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .schedule-popup button:hover {
-    background-color:#ff3b3b;
-  }
-  
-  /* FB Embed Container */
-  .live-embed-container {
-    margin-top: 2rem;
-    width: 100%;
-    max-width: 720px;
-    animation: fadeIn 1s ease-in-out;
-  }
-  
-  .fb-watch-button {
-    display: inline-block;
-    margin-top: 1rem;
-    background-color: #4267B2;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
-  }
-  
-  .fb-watch-button:hover {
-    background-color: #365899;
-  }
-  
-  /* Animations */
-  @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); }
-    50% { box-shadow: 0 0 30px rgba(255, 0, 0, 0.8); }
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .go-live-button {
-      font-size: 1.2rem;
-      padding: 1rem 2.5rem;
-    }
-  
-    .schedule-popup {
-      font-size: 0.95rem;
-      padding: 1.2rem;
-    }
-  
-    .live-embed-container iframe {
-      height: 300px;
-    }
-  }
-  
-=======
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 
 .golive-page-container {
-  position: relative;
+  font-family: 'Segoe UI', sans-serif;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   min-height: 100vh;
+  padding: 100px 20px 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
+  overflow-x: hidden;
   text-align: center;
-  font-family: 'Raleway', sans-serif;
-  overflow: hidden;
 }
 
 .live-overlay {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 24, 72, 0.88); /* navy overlay */
-  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 0;
 }
 
-.content-box {
-  position: relative;
+.floating-text {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 8px #ff5f13;
   z-index: 2;
-  color: white;
-  max-width: 800px;
-  padding: 30px;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.floating-text span {
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ff5f13;
+  border-radius: 25px;
+  backdrop-filter: blur(2px);
+  animation: floatUp 3s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 91, 91, 0.3);
+}
+
+.floating-text span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.floating-text span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.floating-text span:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ff5f13;
+  cursor: pointer;
+}
+
+/* Animation Keyframes */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+
+.content-box {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #ff3b3b;
+  z-index: 2;
+  max-width: 700px;
+  width: 90%;
 }
 
 .live-title {
+  font-size: 2.5rem;
   font-family: 'Orbitron', sans-serif;
-  font-size: 3rem;
-  color: white;
-  text-shadow: 2px 2px red;
+  color: #ff5f13;
   margin-bottom: 10px;
+  text-shadow: 0 0 10px #e50914;
 }
 
 .live-subtitle {
   font-size: 1.2rem;
-  color: #f0f0f0;
-  margin-bottom: 30px;
+  color: #ddd;
+  margin-bottom: 25px;
 }
 
 .go-live-button {
-  background-color: navy;
-  color: white;
-  padding: 14px 38px;
-  font-size: 1.1rem;
+  background-color: #e50914;
+  color: #fff;
+  padding: 14px 30px;
+  font-size: 1.2rem;
+  font-family: 'Orbitron', sans-serif;
   border: none;
-  border-radius: 50px;
+  border-radius: 30px;
   cursor: pointer;
-  font-weight: bold;
-  transition: 0.4s;
-  border: 2px solid red;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 15px #e50914;
 }
 
 .go-live-button:hover {
-  background-color: red;
-  color: white;
-  transform: scale(1.05);
+  background-color: #ff5f13;
+  box-shadow: 0 0 25px #ff5f13;
 }
 
 .go-live-button.live {
-  background: red;
-  color: white;
+  background-color: #28a745;
+  box-shadow: 0 0 20px #28a745;
 }
 
 .schedule-popup {
-  background-color: rgba(255, 255, 255, 0.07);
-  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid #ff5f13;
+  color: white;
   padding: 25px;
-  border-radius: 16px;
-  backdrop-filter: blur(12px);
-  border: 2px solid navy;
-  animation: slideUp 0.5s ease-in-out;
+  margin-top: 25px;
+  border-radius: 15px;
+  animation: fadeInUp 0.5s ease-out;
+  box-shadow: 0 0 15px #ff5f13;
+  backdrop-filter: blur(3px);
+  position: relative;
+}
+
+.schedule-popup .schedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .schedule-popup h4 {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-  color: white;
+  font-size: 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+  color: #ffcccb;
 }
 
-.schedule-popup ul {
+.schedule-popup .close-icon {
+  font-size: 1.3rem;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.schedule-popup .close-icon:hover {
+  color: #ff5f13;
+}
+
+.schedule-list {
   list-style: none;
-  padding-left: 0;
-  color: #ffffff;
+  padding: 15px 0;
+  text-align: left;
 }
 
-.schedule-popup li {
-  margin: 15px 0;
-  font-size: 1rem;
-  line-height: 1.6;
+.schedule-list li {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  line-height: 1.5;
 }
 
 .facebook-button {
   background-color: #1877f2;
   color: white;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
   display: inline-flex;
   align-items: center;
-  padding: 12px 26px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 30px;
-  margin-top: 25px;
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  gap: 10px;
+  box-shadow: 0 0 15px #1877f2;
+  transition: background-color 0.3s ease;
 }
 
 .facebook-button:hover {
-  background-color: #135ad8;
-}
-
-.fb-icon {
-  margin-right: 10px;
-  font-size: 1.2rem;
-}
-
-/* Floating inspiration text */
-.floating-text {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  color: white;
-  font-size: 0.95rem;
-  display: flex;
-  justify-content: space-evenly;
-  animation: floatText 10s linear infinite;
-  z-index: 2;
-}
-
-.floating-text span {
-  font-style: italic;
-  opacity: 0.9;
-  color: white;
+  background-color: #0e5cc2;
 }
 
 /* Animations */
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes floatText {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(-4%); }
-  100% { transform: translateX(0); }
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-box {
+    padding: 30px 20px;
+  }
+
+  .floating-text {
+    font-size: 0.95rem;
+    top: 20px;
+  }
+
+  .live-title {
+    font-size: 2rem;
+  }
+
+  .live-subtitle {
+    font-size: 1rem;
+  }
+
+  .go-live-button {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+
+  .schedule-popup h4 {
+    font-size: 1.3rem;
+  }
 }
->>>>>>> 4c1284a (Update project with latest changes)

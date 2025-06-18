@@ -1,482 +1,492 @@
-<<<<<<< HEAD
-/* Header Section */
-.header {
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Playfair+Display&display=swap');
+
+.landing-header {
   position: relative;
-  width: 100%;
-  height: 100vh;
+  background: linear-gradient(135deg, #000a1a, #001f3f);
+  color: white;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 80px 30px 60px;
+  background-attachment: fixed;
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
-  transition: background-image 1s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transition: background-position 0.3s ease-out;
+  min-height: 100vh;
+}
+
+/* Particle Overlay */
+.particle-overlay {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: visible;
+}
+
+.particle {
+  position: absolute;
+  background: #00fff7;
+  opacity: 0.3;
+  border-radius: 50%;
+  animation: twinkle 4s infinite ease-in-out alternate;
+  filter: drop-shadow(0 0 3px #00fff7);
+}
+
+.particle:nth-child(odd) {
+  width: 4px;
+  height: 4px;
+  animation-delay: 0s;
+  top: 20%;
+  left: 10%;
+}
+
+.particle:nth-child(even) {
+  width: 2px;
+  height: 2px;
+  animation-delay: 2s;
+  top: 50%;
+  left: 50%;
+}
+
+/* Spread particles randomly */
+.particle:nth-child(3) { top: 30%; left: 30%; animation-delay: 1.2s; }
+.particle:nth-child(4) { top: 10%; left: 70%; animation-delay: 3s; }
+.particle:nth-child(5) { top: 80%; left: 15%; animation-delay: 1.5s; }
+/* Add more if needed, or randomize positions dynamically in React */
+
+@keyframes twinkle {
+  0% { opacity: 0.1; transform: scale(0.8);}
+  100% { opacity: 0.6; transform: scale(1.2);}
+}
+
+/* Glitchy Text */
+.glitch-wrapper {
   text-align: center;
-  color: white;
-  padding: 0 2rem;
-  margin-top: 80px;
-  overflow: hidden; /* Prevent unwanted scrolling */
+  margin-bottom: 12px;
+  z-index: 2;
+  position: relative;
 }
 
-/* Dark overlay for better text readability */
-.overlay {
-=======
-/* Wrapper */
-.header-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 80px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Welcome Section */
-.welcome-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #001f3f;
-  color: white;
-  padding: 4rem 2rem;
-  text-align: left;
-}
-
-/* Welcome Section */
-.welcome-text {
-  flex: 1 1 50%;
-  padding-right: 2rem;
-  animation: fadeIn 2s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.intro-banner {
-  background-color: #ff3b3b;
-  color: white;
+.intro-tag {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 25px;
-  width: fit-content;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  animation: slideInLeft 1.2s ease;
+  background-color: red;
+  padding: 10px 28px;
+  border-radius: 30px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  user-select: none;
+  position: relative;
+  z-index: 2;
+  animation: glitch 3s infinite;
+  cursor: default;
 }
 
-.welcome-text h1 {
-  font-size: clamp(2.2rem, 5vw, 4rem);
-  line-height: 1.2;
-  font-weight: 800;
+.glitch {
+  position: relative;
   color: white;
-  margin: 0;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
-.highlight-word {
-  color: #007bff;
-  font-style: italic;
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0.8;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
 }
 
-.city {
-  color: #ffc107;
-  font-size: 1.5rem;
-  font-weight: 500;
+.glitch::before {
+  animation: glitchTop 2s infinite linear alternate-reverse;
+  color: #f00;
+  z-index: -1;
 }
 
-.welcome-subtitle {
-  font-size: 1.4rem;
-  color: #f0f0f0;
+.glitch::after {
+  animation: glitchBottom 2s infinite linear alternate;
+  color: #0ff;
+  top: 1px;
+  z-index: -1;
+}
+
+@keyframes glitchTop {
+  0% { clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%); transform: translate(-2px, -2px);}
+  50% { clip-path: polygon(0 10%, 100% 10%, 100% 55%, 0 55%); transform: translate(2px, 2px);}
+  100% { clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%); transform: translate(-2px, -2px);}
+}
+
+@keyframes glitchBottom {
+  0% { clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%); transform: translate(2px, 2px);}
+  50% { clip-path: polygon(0 45%, 100% 45%, 100% 90%, 0 90%); transform: translate(-2px, -2px);}
+  100% { clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%); transform: translate(2px, 2px);}
+}
+
+.welcome-box {
+  display: inline-block;
+  background-color: red;
+  padding: 12px 36px;
+  border-radius: 30px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  user-select: none;
+  cursor: default;
+
+  /* Animate pulse + scale */
+  animation: pulseScale 3s ease-in-out infinite;
+  box-shadow:
+    0 0 8px #ff0000aa,
+    0 0 20px #ff0000cc,
+    0 0 30px #ff0000dd;
+}
+
+@keyframes pulseScale {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 8px #ff0000aa,
+      0 0 20px #ff0000cc,
+      0 0 30px #ff0000dd;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow:
+      0 0 15px #ff3333ee,
+      0 0 30px #ff3333ff,
+      0 0 40px #ff3333ff;
+  }
+}
+
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.church-title {
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  margin: 10px 0 12px;
+  color: #fff;
+  line-height: 1.1;
+  user-select: none;
+  text-shadow: 0 0 10px #ff0000;
+}
+
+.highlight {
+  color: red;
+  text-shadow: 0 0 20px rgba(255, 0, 0, 0.9);
+}
+
+.pretoria {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  color:rgb(181, 181, 23);
+  font-weight: 600;
+  user-select: none;
+}
+
+.church-subtitle {
+  margin: 20px auto 40px;
   max-width: 600px;
-  font-weight: 500;
+  font-size: clamp(1rem, 1.7vw, 1.3rem);
   line-height: 1.6;
+  font-style: normal;
+  color: #ddd;
+  user-select: none;
 }
 
+/* Buttons */
 .cta-buttons {
   display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.cta-primary,
-.cta-secondary {
-  padding: 0.8rem 1.6rem;
-  border: none;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.cta-primary {
-  background-color: #007bff;
-  color: white;
-}
-
-.cta-primary:hover {
-  background-color: #0056b3;
-}
-
-.cta-secondary {
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  color: #ffffff;
-}
-
-.cta-secondary:hover {
-  background-color: #ffffff;
-  color: #001f3f;
-}
-
-/* Animation */
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-50%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@media (max-width: 768px) {
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .cta-buttons button {
-    width: 80%;
-  }
-
-  .welcome-text {
-    align-items: center;
-    text-align: center;
-  }
-
-  .welcome-subtitle {
-    font-size: 1.1rem;
-  }
-}
-
-
-/* Pastor Image */
-.pastor-image2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  gap: 1rem;
-  animation: fadeIn 2s ease-in-out;
-}
-
-.pastor-photo-wrapper {
-  position: relative;
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
-}
-
-.pastor-photo-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 50%;
-  border: 6px solid #ffffff;
-  transition: transform 0.4s ease;
-}
-
-.pastor-photo-wrapper:hover img {
-  transform: scale(1.05);
-}
-
-.photo-ring {
->>>>>>> 4c1284a (Update project with latest changes)
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-<<<<<<< HEAD
-  background: rgba(223, 215, 215, 0.9);
-  z-index: 1; /* Ensures overlay is on top of background */
-}
-
-/* Centered Content */
-.header-content {
-  position: relative;
-  max-width: 90%;
-  text-align: center;
-  animation: fadeIn 2s ease-in-out;
-  padding-bottom: 6rem;
-  z-index: 2; /* Ensures text is above overlay */
-}
-
-/* Slide-up effect for heading */
-.header-content h1 {
-  font-size: clamp(7rem, 6vw, 6rem); /* Responsive font size */
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: slideUp 1.5s ease-in-out forwards;
-}
-
-/* Typing effect for subheading */
-.header-content h2 {
-  color: #007bff;
-  font-size: clamp(4rem, 4vw, 3rem);
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid white;
-  width: 0;
-  animation: typing 3s steps(40, end) forwards, blink 0.8s infinite;
-}
-
-/* Fade-in effect for paragraph */
-.header-content p {
-  font-size: clamp(2.5rem, 3vw, 2rem);
-  max-width: 800px;
-  margin: 0 auto;
-  opacity: 0;
-  animation: fadeIn 3s ease-in-out 1.5s forwards;
-  color: #ff3b3b;
-  font-weight: bold;
-}
-
-/* Keyframes for animations */
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes slideUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
-/* Fully Responsive Design */
-@media (max-width: 1024px) {
-  .header-content { padding: 0 1.5rem; }
-}
-
-@media (max-width: 768px) {
-  .header { height: 90vh; }
-  .header-content h2 { margin-right: 2rem; }
-}
-
-@media (max-width: 480px) {
-  .header { height: 80vh; padding: 0 1rem; }
-  .header-content h1{ font-size:3.5rem;}
-  .header-content h2 { font-size: 1.6rem; }
-  .header-content p { font-size: 1.4rem; }
-=======
-  border-radius: 50%;
-  border: 4px solid #007bff;
-  box-sizing: border-box;
-  animation: pulseRing 2.5s infinite ease-in-out;
-  pointer-events: none;
-}
-
-@keyframes pulseRing {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  70% {
-    transform: scale(1.15);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1.15);
-    opacity: 0;
-  }
-}
-
-.pastor-details1 {
-  margin-top: 0.5rem;
-}
-
-.pastor-name1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.pastor-title1 {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #ffc107;
-}
-
-@media (max-width: 768px) {
-  .pastor-photo-wrapper {
-    width: 200px;
-    height: 200px;
-  }
-
-  .pastor-name1 {
-    font-size: 1.3rem;
-  }
-
-  .pastor-title {
-    font-size: 1rem;
-  }
-}
-
-
-/* Carousel and Video Section */
-.carousel-video-section {
-  display: flex;
-  justify-content: space-between;
-  padding: 3rem 2rem;
-  gap: 2rem;
+  gap: 24px;
   flex-wrap: wrap;
 }
 
-/* Carousel */
-.image-carousel {
-  flex: 1 1 60%;
-  height: 500px;
-  position: relative;
+.glow-button {
+  border: none;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  transition: all 0.35s ease-in-out;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+  user-select: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.glow-button.primary {
+  background-color: red;
+  color: white;
+  box-shadow:
+    0 0 8px #ff0000,
+    0 0 20px #ff0000,
+    0 0 30px #ff0000;
+}
+
+.glow-button.primary:hover,
+.glow-button.primary:focus {
+  box-shadow:
+    0 0 12px #ff3333,
+    0 0 25px #ff3333,
+    0 0 40px #ff3333;
+  transform: scale(1.05);
+  outline: none;
+}
+
+.glow-button.secondary {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  box-shadow: 0 0 8px white;
+}
+
+.glow-button.secondary:hover,
+.glow-button.secondary:focus {
+  background-color: white;
+  color: red;
+  box-shadow:
+    0 0 20px white,
+    0 0 35px white;
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Pastor Card */
+.pastor-card {
+  margin-top: 48px;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 28px;
+  border-radius: 16px;
+  background: rgba(255 0 0 / 0.12);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  max-width: 350px;
+  user-select: none;
+  cursor: default;
+}
+
+.pastor-img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid red;
+  flex-shrink: 0;
+}
+
+//* Welcome Box Animation */
+.welcome-box {
+  display: inline-block;
+  background-color: red;
+  padding: 12px 36px;
+  border-radius: 30px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  user-select: none;
+  cursor: default;
+
+  /* Animate pulse + scale */
+  animation: pulseScale 3s ease-in-out infinite;
+  box-shadow:
+    0 0 8px #ff0000aa,
+    0 0 20px #ff0000cc,
+    0 0 30px #ff0000dd;
+}
+
+@keyframes pulseScale {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 8px #ff0000aa,
+      0 0 20px #ff0000cc,
+      0 0 30px #ff0000dd;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow:
+      0 0 15px #ff3333ee,
+      0 0 30px #ff3333ff,
+      0 0 40px #ff3333ff;
+  }
+}
+
+/* Media Display Section */
+/* Media Display Section */
+.media-display {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-.carousel-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 15px;
-  background-color: #000;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 1s ease-in-out;
-}
-
-/* Video */
-.video-container {
-  flex: 1 1 35%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.video-wrapper {
+  align-items: stretch; /* equal height */
+  margin-top: 60px;
+  gap: 40px;
+  flex-wrap: nowrap; /* side-by-side on desktop */
+  max-width: 1300px; /* widen max-width for bigger items */
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
   position: relative;
-  width: 100%;
-  height: 500px;
-  border-radius: 15px;
+}
+
+.carousel,
+.video-section {
+  width: 600px;
+  height: 360px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  user-select: none;
+  cursor: default;
+  position: relative;
 }
 
+.carousel {
+  box-shadow:
+    0 0 25px rgba(0, 255, 255, 0.6),
+    inset 0 0 12px rgba(0, 255, 255, 0.15);
+}
+
+.video-section {
+  box-shadow:
+    0 0 25px rgba(255, 0, 0, 0.6),
+    inset 0 0 12px rgba(255, 0, 0, 0.15);
+}
+
+.carousel-image,
 .church-video {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  background-color: black;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
 }
 
-/* Play Button */
-.custom-play-button {
+/* Video Play Button */
+.video-play {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.85);
+  top: 45%;
+  left: 45%;
+  font-size: 4rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
   border: none;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  font-size: 2rem;
-  color: #001f3f;
+  padding: 14px 20px;
   cursor: pointer;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease;
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  user-select: none;
 }
 
-.custom-play-button:hover {
-  transform: translate(-50%, -50%) scale(1.1);
+.video-play:hover,
+.video-play:focus {
+  background-color: rgba(255, 0, 0, 0.8);
+  outline: none;
+  transform: scale(1.1);
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* Responsive for smaller screens */
+@media (max-width: 1100px) {
+  .media-display {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .carousel,
+  .video-section {
+    width: 90vw;
+    height: 280px;
+  }
+}
+
+
+
+/* Scroll Indicator */
+.scroll-indicator {
+  margin-top: 70px;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  color: #aaa;
+  animation: bounce 2.5s infinite;
+  user-select: none;
+  cursor: default;
+}
+
+.scroll-label {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.scroll-arrow {
+  font-size: 26px;
+  margin-top: 6px;
+  color: #ff0000cc;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-  .welcome-section {
+
+@media (max-width: 900px) {
+  .media-display {
     flex-direction: column;
-    text-align: center;
-    padding: 3rem 1.5rem;
+    gap: 30px;
   }
 
-  .welcome-text {
-    padding-right: 0;
-    margin-bottom: 2rem;
+  .carousel,
+  .video-section {
+    max-width: 90vw;
   }
 
-  .pastor-image2 img {
-    max-height: 300px;
-  }
-
-  .carousel-video-section {
-    flex-direction: column;
-    padding: 2rem 1.5rem;
-  }
-
-  .image-carousel,
-  .video-wrapper {
-    height: 350px;
-  }
-
-  .video-container {
-    flex: 1 1 100%;
+  .hero-section {
+    padding: 0 15px;
   }
 }
 
 @media (max-width: 480px) {
-  .welcome-text h1 {
-    font-size: 2rem;
+  .church-title {
+    font-size: 2.4rem;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    gap: 16px;
   }
 
-  .welcome-text h2 {
-    font-size: 1.4rem;
+  .glow-button {
+    width: 100%;
+    padding: 14px 0;
   }
 
-  .welcome-text p {
-    font-size: 1rem;
+  .pastor-card {
+    max-width: 100%;
+    flex-direction: column;
+    text-align: center;
   }
 
-  .image-carousel,
-  .video-wrapper {
-    height: 250px;
+  .pastor-img {
+    margin-bottom: 12px;
   }
-
-  .custom-play-button {
-    width: 60px;
-    height: 60px;
-    font-size: 1.5rem;
-  }
->>>>>>> 4c1284a (Update project with latest changes)
 }

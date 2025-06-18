@@ -1,68 +1,12 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react";
-import "../styles/Header.css";
-import church1 from "../assets/church2.jpeg";
-import church9 from "../assets/church9.jpeg";
-import church2 from "../assets/church1.jpeg";
-import church8 from "../assets/church8.jpeg";
-import church3 from "../assets/church3 (2).jpeg";
-import church7 from "../assets/church7.jpeg";
-import church4 from "../assets/church4.jpeg";
-import church10 from "../assets/church10.jpeg";
-import church5 from "../assets/church5.jpeg";
-import church6 from "../assets/church6.jpeg";
-
-const images = [
-  church1,
-  church9,
-  church2,
-  church8,
-  church3,
-  church7,
-  church4,
-  church10,
-  church5,
-  church6,
-];
-
-const Header = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); 
-
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <header
-      className="header"
-      style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
-    >
-      <div className="overlay"></div>
-      <div className="header-content">
-        <h1>Welcome to</h1>
-        <h2>Rhema Chapel <br/>International Churches <br /> (Pretoria)</h2>
-        <p>The Home of the blessed people, a people of the Word changing their World</p>
-      </div>
-    </header>
-=======
 import React, { useState, useEffect, useRef } from "react";
 import "../styles/Header.css";
 
-import pastor from "../assets/Ps.jpeg";
-import church1 from '../assets/dance.jpg';
-import church2 from '../assets/pw_p2.jpg';
-import church3 from '../assets/j_pw.jpg';
-import church4 from '../assets/sit.jpg';
-import church5 from '../assets/p_pw_gift.jpg';
-import church6 from '../assets/IMG_3824.jpg';
-import church7 from '../assets/p_pw.jpg';
-import church8 from '../assets/pw_p.jpg';
-import church9 from '../assets/woman.jpg';
-import church10 from '../assets/woman_f.jpg';
+import pastor from "../assets/pastor.jpg";
+import church1 from "../assets/church7.jpeg";
+import church2 from "../assets/church8.jpeg";
+import church3 from "../assets/church9.jpeg";
+import church4 from "../assets/church10.jpeg";
+import church5 from "../assets/church5.jpeg";
 
 const images = [church1, church2, church3, church4, church5];
 
@@ -70,12 +14,23 @@ const Header = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
+    // Image carousel every 4s
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
     }, 4000);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    // Scroll listener for parallax background effect
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handlePlay = () => {
@@ -84,67 +39,87 @@ const Header = () => {
   };
 
   return (
-    <div className="header-wrapper">
-      {/* Welcome Section */}
-      <section className="welcome-section">
-        <div className="welcome-text">
-          <div className="intro-banner">You're Welcome Here</div>
-          <h1>
-            Rhema Chapel <span className="highlight-word">International</span><br />
-            Churches <span className="city">(Pretoria)</span>
-          </h1>
-          <p className="welcome-subtitle">
-            A home of the <strong>Blessed People</strong> —
-            a people of the Word, <em>changing their world</em>.
-          </p>
-          <div className="cta-buttons">
-            <button className="cta-primary">Join Us Sunday</button>
-            <button className="cta-secondary">Plan a Visit</button>
-          </div>
+    <header className="landing-header" style={{ backgroundPositionY: `${scrollY * 0.3}px` }}>
+      {/* Particle Overlay */}
+      <div className="particle-overlay" aria-hidden="true">
+        {[...Array(40)].map((_, i) => (
+          <span key={i} className="particle" />
+        ))}
+      </div>
+
+      {/* Glitchy Welcome Tag */}
+      <div className="glitch-wrapper">
+        <div className="welcome-box">
+          You're Welcome to
+        </div>
+      </div>
+
+      <div className="hero-section">
+        <h1 className="church-title">
+          Rhema Chapel <span className="highlight">International</span>
+          <br />
+          Churches <span className="pretoria">(Pretoria)</span>
+        </h1>
+        <p className="church-subtitle">
+          The Home of the <strong>Blessed People</strong> — a People of the Word{" "}
+          <em>changing their World</em>.
+        </p>
+
+        <div className="cta-buttons">
+          <button className="glow-button primary" aria-label="Join Us on Sunday">
+            Join Us on Sunday
+          </button>
+          <button className="glow-button secondary" aria-label="Plan a Visit">
+            Plan a Visit
+          </button>
         </div>
 
+        <div className="pastor-card">
+          <img src={pastor} alt="Pastor Gospel Azuatalum" className="pastor-img" />
+          <div>
+            <h4>Pastor Gospel Azuatalum</h4>
+            <p>Minister in Charge (MIC)</p>
+          </div>
+        </div>
+      </div>
 
-        <div className="pastor-image2">
-  <div className="pastor-photo-wrapper">
-    <img src={pastor} alt="Our Pastor" />
-    <div className="photo-ring"></div>
-  </div>
-  <div className="pastor-details1">
-    <div className="pastor-name1">Pastor Gospel Azuatalum</div>
-    <div className="pastor-title1">Minister in Charge (MIC)</div>
-  </div>
-</div>
-
-      </section>
-
-      {/* Carousel and Video Section */}
-      <section className="carousel-video-section">
-        <div className="image-carousel">
+      <section className="media-display">
+        <div className="carousel" aria-label="Church photo carousel">
           <img
             src={images[currentImageIndex]}
-            alt={`Church ${currentImageIndex + 1}`}
-            className="carousel-img"
+            alt={`Church Slide ${currentImageIndex + 1}`}
+            className="carousel-image"
           />
         </div>
 
-        <div className="video-container">
-          <div className="video-wrapper">
+        <div className="video-section">
+          <div className="video-frame">
             <video
               ref={videoRef}
               className="church-video"
               src="https://www.w3schools.com/html/mov_bbb.mp4"
               controls={isPlaying}
+              aria-label="Church video preview"
             />
             {!isPlaying && (
-              <button className="custom-play-button" onClick={handlePlay}>
+              <button
+                className="video-play"
+                onClick={handlePlay}
+                aria-label="Play church video"
+                title="Play video"
+              >
                 ▶
               </button>
             )}
           </div>
         </div>
       </section>
-    </div>
->>>>>>> 4c1284a (Update project with latest changes)
+
+      <div className="scroll-indicator" role="presentation" aria-hidden="true">
+        <span className="scroll-label">Scroll Down</span>
+        <div className="scroll-arrow">⌄</div>
+      </div>
+    </header>
   );
 };
 
