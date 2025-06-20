@@ -62,7 +62,7 @@ const About = () => {
             <img src={founderImg} alt="Rev. George Odegboye" className="founder-photo" />
           </div>
           <div className="founder-text-block">
-            <h2 className="founder-name">Rev. George Olawale Odegboye</h2>
+            <h2 className="founder-name">Rev. George Olawale Adegboye</h2>
             <p className="founder-title">Senior Minister in Charge</p>
             <p className="founder-bio">
               An apostle of the New Testament with a commission to “Take the Word of the nations of the World, emphasizing its integrity. He is the President of the Ever Increasing Word Ministries, aka. Rhema Chapel International Churches with many branches worldwide. He is also the President of the Word of Victory Bible Training Institute and the Young Minister Teaching School, which are the training arm of the ministry. He teaches the Word of God extensively with a simplistic practical prophetic insight. He is in great demand all over the world across denominations and independent churches for conventions, seminars and outreaches. He is committed to making the Word of God available all over the world through every available means. He hosts the weekly Word and You telecast programme on many Television Stations in Nigeria. He is an author of many books on diverse topics concerning the Christian life and living. Rev. George Olawale Adegboye holds a Master’s Degree in Sociology. He is married to Oluruntoyin Modupeola and they are blessed with three children: Faith, Faithful, Faithfulness. They reside in Ilorin, Nigeria.
