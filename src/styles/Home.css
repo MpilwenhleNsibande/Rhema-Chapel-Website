@@ -212,30 +212,221 @@
   }
 }
 
-/* Responsive */
+/* For screens 900px and smaller */
 @media (max-width: 900px) {
   .pastor-section,
   .word-of-the-year {
     flex-direction: column;
     text-align: center;
   }
+
   .word-image {
     width: 100%;
     max-width: 400px;
   }
 }
 
-.pastor-signature {
-  margin-top: 30px;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
-  font-style: italic;
-  color: #001f3f;
-  text-align: right;
-  padding-right: 12px;
-  border-top: 1px solid rgba(0, 31, 63, 0.08);
-  padding-top: 15px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+/* For screens 768px and smaller */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+
+  .pastor-image-glow {
+    width: 240px;
+    height: 240px;
+  }
+
+  .pastor-text h2 {
+    font-size: 2rem;
+  }
+
+  .read-more-btn {
+    font-size: 0.95rem;
+    padding: 8px 20px;
+  }
+
+  .vision-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+/* For screens 600px and smaller */
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 60px 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 10px 14px;
+    margin: 5px;
+  }
+
+  .pastor-image-glow {
+    width: 200px;
+    height: 200px;
+  }
+
+  .pastor-text h2 {
+    font-size: 1.7rem;
+  }
+
+  .pastor-text p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .read-more-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .vision-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .word-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .word-para {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .highlight {
+    display: inline-block;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+/* For very small devices (450px and smaller) */
+@media (max-width: 450px) {
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section p {
+    font-size: 0.95rem;
+  }
+
+  .pastor-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .read-more-btn {
+    font-size: 0.8rem;
+    padding: 7px 14px;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+}
+
+/* For ultra-small screens (max-width: 350px) */
+@media (max-width: 350px) {
+  .hero-section {
+    padding: 40px 10px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.3rem;
+  }
+
+  .hero-section p {
+    font-size: 0.85rem;
+  }
+
+  .btn,
+  .read-more-btn {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+
+  .pastor-image-glow {
+    width: 160px;
+    height: 160px;
+  }
+
+  .services-section h2,
+  .vision-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .word-text h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* For ultra-narrow screens (250px and smaller) */
+@media (max-width: 250px) {
+  .hero-section h1 {
+    font-size: 1.1rem;
+  }
+
+  .hero-section p {
+    font-size: 0.75rem;
+  }
+
+  .btn,
+  .read-more-btn {
+    font-size: 0.7rem;
+    padding: 5px 8px;
+  }
+
+  .pastor-image-glow {
+    width: 140px;
+    height: 140px;
+  }
+
+  .pastor-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .word-text h2 {
+    font-size: 1rem;
+  }
+
+  .word-para {
+    font-size: 0.85rem;
+  }
+
+  .services-grid {
+    padding: 0 6px;
+  }
+
+  .home-page {
+    padding: 0 6px;
+  }
 }
