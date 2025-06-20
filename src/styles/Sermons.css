@@ -16,15 +16,15 @@
 .sermons-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 3rem;
-  color: #ff5f13;
-  text-shadow: 0 0 10px #e50914;
-  margin-bottom: 10px;
+  color: #991f1f;
+  margin-bottom: 12px;
+  text-shadow: 0 0 12px rgba(153, 31, 31, 0.5);
 }
 
 .sermons-subtitle {
   font-size: 1.2rem;
   color: #f1c7a7;
-  text-shadow: 0 0 6px rgba(229, 9, 20, 0.6);
+  text-shadow: 0 0 6px rgba(153, 31, 31, 0.4);
 }
 
 .sermons-container {
@@ -37,22 +37,22 @@
 
 .sermon-card {
   background: #04192d;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(229, 9, 20, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 0 16px rgba(153, 31, 31, 0.3);
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sermon-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 25px #e50914;
+  box-shadow: 0 0 22px rgba(153, 31, 31, 0.6);
 }
 
 .sermon-video-wrapper {
   position: relative;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
   overflow: hidden;
-  border-radius: 15px 15px 0 0;
+  border-radius: 16px 16px 0 0;
 }
 
 .sermon-video {
@@ -62,7 +62,7 @@
   width: 100%;
   height: 100%;
   border: none;
-  border-radius: 15px 15px 0 0;
+  border-radius: 16px 16px 0 0;
 }
 
 .sermon-info {
@@ -72,29 +72,91 @@
 
 .sermon-title {
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.25rem;
-  color: #ff5f13;
+  font-size: 1.3rem;
+  color: #991f1f;
   margin: 0 0 8px;
-  text-shadow: 0 0 8px #e50914;
+  text-shadow: 0 0 8px rgba(153, 31, 31, 0.4);
 }
 
 .sermon-date {
   font-size: 0.9rem;
   color: #f1c7a7;
-  text-shadow: 0 0 5px rgba(229, 9, 20, 0.5);
+  text-shadow: 0 0 4px rgba(153, 31, 31, 0.3);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .sermons-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .sermon-title {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .sermons-subtitle {
     font-size: 1rem;
   }
+}
+
+
+.filter-section {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 1rem;
+  color: #ffe3d1;
+}
+
+.filter-section select {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  background: #fff;
+  color: #001f3f;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+}
+
+.watch-btn {
+  display: inline-block;
+  margin-top: 12px;
+  background: #991f1f;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-family: 'Orbitron', sans-serif;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.watch-btn:hover {
+  background: #bb2c2c;
+}
+
+/* Audio-Only Layout */
+.sermon-audio-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #04192d;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.3);
+}
+
+.audio-thumbnail {
+  font-size: 4rem;
+  margin-bottom: 16px;
+}
+
+/* Pagination */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
 }

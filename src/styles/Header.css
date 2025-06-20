@@ -69,7 +69,7 @@
 
 .intro-tag {
   display: inline-block;
-  background-color: red;
+  background-color: #991f1f;
   padding: 10px 28px;
   border-radius: 30px;
   font-family: 'Orbitron', sans-serif;
@@ -103,7 +103,7 @@
 
 .glitch::before {
   animation: glitchTop 2s infinite linear alternate-reverse;
-  color: #f00;
+  color: #991f1f;
   z-index: -1;
 }
 
@@ -128,7 +128,7 @@
 
 .welcome-box {
   display: inline-block;
-  background-color: red;
+  background-color: #991f1f; 
   padding: 12px 36px;
   border-radius: 30px;
   font-family: 'Orbitron', sans-serif;
@@ -142,26 +142,17 @@
 
   /* Animate pulse + scale */
   animation: pulseScale 3s ease-in-out infinite;
-  box-shadow:
-    0 0 8px #ff0000aa,
-    0 0 20px #ff0000cc,
-    0 0 30px #ff0000dd;
+  box-shadow: none;
 }
 
 @keyframes pulseScale {
   0%, 100% {
     transform: scale(1);
-    box-shadow:
-      0 0 8px #ff0000aa,
-      0 0 20px #ff0000cc,
-      0 0 30px #ff0000dd;
+    box-shadow:none
   }
   50% {
     transform: scale(1.05);
-    box-shadow:
-      0 0 15px #ff3333ee,
-      0 0 30px #ff3333ff,
-      0 0 40px #ff3333ff;
+    box-shadow:none;
   }
 }
 
@@ -184,12 +175,12 @@
   color: #fff;
   line-height: 1.1;
   user-select: none;
-  text-shadow: 0 0 10px #ff0000;
+  text-shadow: none;
 }
 
 .highlight {
-  color: red;
-  text-shadow: 0 0 20px rgba(255, 0, 0, 0.9);
+  color: #991f1f; /* dim red or change to blue if possible */
+  text-shadow: none;
 }
 
 .pretoria {
@@ -225,42 +216,39 @@
   cursor: pointer;
   font-family: 'Orbitron', sans-serif;
   transition: all 0.35s ease-in-out;
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+  box-shadow: 0 0 15px #991f1f;
   user-select: none;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .glow-button.primary {
-  background-color: red;
+  background-color: #003366; /* Navy Blue */
   color: white;
-  box-shadow:
-    0 0 8px #ff0000,
-    0 0 20px #ff0000,
-    0 0 30px #ff0000;
+  box-shadow: none;
 }
+
 
 .glow-button.primary:hover,
 .glow-button.primary:focus {
-  box-shadow:
-    0 0 12px #ff3333,
-    0 0 25px #ff3333,
-    0 0 40px #ff3333;
-  transform: scale(1.05);
-  outline: none;
+  background-color: #002244; /* Slightly darker navy for hover */
+  transform: scale(1.03);
+  box-shadow: none;
 }
+
 
 .glow-button.secondary {
   background-color: transparent;
-  border: 2px solid white;
-  color: white;
-  box-shadow: 0 0 8px white;
+  border: 2px solid #003366;
+  color: #003366;
+  box-shadow: none;
 }
+
 
 .glow-button.secondary:hover,
 .glow-button.secondary:focus {
   background-color: white;
-  color: red;
+  color: #991f1f;
   box-shadow:
     0 0 20px white,
     0 0 35px white;
@@ -289,14 +277,14 @@
   width: 80px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid red;
+  border: 3px solid #991f1f;
   flex-shrink: 0;
 }
 
 //* Welcome Box Animation */
 .welcome-box {
   display: inline-block;
-  background-color: red;
+  background-color: #6a1b1b; /* muted dark red */
   padding: 12px 36px;
   border-radius: 30px;
   font-family: 'Orbitron', sans-serif;
@@ -308,28 +296,30 @@
   user-select: none;
   cursor: default;
 
-  /* Animate pulse + scale */
-  animation: pulseScale 3s ease-in-out infinite;
-  box-shadow:
-    0 0 8px #ff0000aa,
-    0 0 20px #ff0000cc,
-    0 0 30px #ff0000dd;
+  /* Animate scale only, no glow */
+  animation: pulseScaleNoGlow 3s ease-in-out infinite;
+  box-shadow: none;
 }
+
+@keyframes pulseScaleNoGlow {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+
 
 @keyframes pulseScale {
   0%, 100% {
     transform: scale(1);
-    box-shadow:
-      0 0 8px #ff0000aa,
-      0 0 20px #ff0000cc,
-      0 0 30px #ff0000dd;
+    box-shadow:none
   }
   50% {
     transform: scale(1.05);
-    box-shadow:
-      0 0 15px #ff3333ee,
-      0 0 30px #ff3333ff,
-      0 0 40px #ff3333ff;
+    box-shadow:none
   }
 }
 
@@ -362,14 +352,12 @@
 
 .carousel {
   box-shadow:
-    0 0 25px rgba(0, 255, 255, 0.6),
+    0 0 25px #991f1f,
     inset 0 0 12px rgba(0, 255, 255, 0.15);
 }
 
 .video-section {
-  box-shadow:
-    0 0 25px rgba(255, 0, 0, 0.6),
-    inset 0 0 12px rgba(255, 0, 0, 0.15);
+  box-shadow:none
 }
 
 .carousel-image,
@@ -400,7 +388,7 @@
 
 .video-play:hover,
 .video-play:focus {
-  background-color: rgba(255, 0, 0, 0.8);
+  background-color: #991f1f;
   outline: none;
   transform: scale(1.1);
 }
@@ -440,7 +428,7 @@
 .scroll-arrow {
   font-size: 26px;
   margin-top: 6px;
-  color: #ff0000cc;
+  color: #991f1f;
 }
 
 @keyframes bounce {

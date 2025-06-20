@@ -10,7 +10,7 @@ const YMTS = () => {
         <img src={ymtsImage} alt="Young Minister Teaching School" className="banner-image" />
         <div className="banner-text">
           <h1>Young Minister's Teaching School (YMTS)</h1>
-          <p><strong>Moulding The Man That Makes The Ministry</strong></p>
+          
         </div>
       </div>
 
