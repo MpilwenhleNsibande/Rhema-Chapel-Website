@@ -1,126 +1,128 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 
-/* === Page Base === */
+/* === Design Tokens === */
+:root {
+  --primary: #001f3f;
+  --accent: #991f1f;
+  --light-bg: #ffffff;
+  --text-main: #1a1a1a;
+  --text-sub: #333;
+  --glassy: rgba(255, 255, 255, 0.25);
+}
+
+/* === Page Container === */
 .golive-page-container {
   font-family: 'Segoe UI', sans-serif;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: var(--light-bg) url('/assets/live-bg.jpg') center/cover no-repeat;
   position: relative;
   min-height: 100vh;
   padding: 100px 20px 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: var(--text-main);
   overflow-x: hidden;
   text-align: center;
 }
 
-/* === Overlay === */
+/* === Glassy Overlay === */
 .live-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(2px);
+  background: rgba(0, 31, 63, 0.6);
+  backdrop-filter: blur(5px);
   z-index: 0;
 }
 
-/* === Floating Text === */
+/* === Floating Highlight Text === */
 .floating-text {
   position: absolute;
-  top: 20px;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 16px;
+  gap: 14px;
   font-size: 0.95rem;
   font-weight: 600;
   font-family: 'Orbitron', sans-serif;
   z-index: 2;
-  padding: 0 10px;
+  animation: fadeIn 1.2s ease-out forwards;
   max-width: 90%;
-  animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 .floating-text span {
   padding: 10px 16px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid #991f1f;
-  border-radius: 25px;
-  backdrop-filter: blur(3px);
-  animation: floatUp 3s ease-in-out infinite;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: none;
-  white-space: nowrap;
+  background: var(--glassy);
+  border: 1px solid var(--accent);
+  border-radius: 30px;
+  backdrop-filter: blur(5px);
+  color: var(--light-bg);
+  animation: floatUp 4s ease-in-out infinite;
+  transition: transform 0.3s ease;
 }
 
 .floating-text span:hover {
-  transform: scale(1.05);
-  background: rgba(255, 255, 255, 0.2);
-  cursor: pointer;
+  transform: scale(1.08);
+  background: rgba(255, 255, 255, 0.35);
+  color: var(--accent);
 }
 
+/* === Animations === */
 @keyframes floatUp {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateX(-50%) translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
+  from { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
-/* === Content === */
+/* === Core Content === */
 .content-box {
-  background: rgba(0, 0, 0, 0.75);
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   z-index: 2;
   max-width: 700px;
-  width: 90%;
+  width: 95%;
 }
 
 .live-title {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-family: 'Orbitron', sans-serif;
-  color: #ff5f13;
-  margin-bottom: 10px;
+  color: var(--primary);
+  margin-bottom: 12px;
 }
 
 .live-subtitle {
-  font-size: 1.1rem;
-  color: #ddd;
-  margin-bottom: 25px;
+  font-size: 1.15rem;
+  color: var(--text-sub);
+  margin-bottom: 30px;
 }
 
 /* === CTA === */
 .go-live-button {
-  background-color: #991f1f;
-  color: #fff;
-  padding: 14px 30px;
-  font-size: 1.15rem;
+  background-color: var(--accent);
+  color: white;
+  padding: 16px 34px;
+  font-size: 1.1rem;
   font-family: 'Orbitron', sans-serif;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
 }
 
 .go-live-button:hover {
-  background-color: #c82828;
+  background-color: #c52e2e;
+  transform: scale(1.05);
 }
 
 .go-live-button.live {
@@ -129,14 +131,14 @@
 
 /* === Schedule Popup === */
 .schedule-popup {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid #991f1f;
-  color: white;
+  background: rgba(0, 31, 63, 0.8);
+  border: 2px solid var(--accent);
+  color: #fff;
   padding: 25px;
-  margin-top: 25px;
+  margin-top: 30px;
   border-radius: 15px;
-  animation: fadeInUp 0.5s ease-out;
-  backdrop-filter: blur(4px);
+  animation: fadeInUp 0.6s ease;
+  backdrop-filter: blur(6px);
 }
 
 .schedule-popup .schedule-header {
@@ -148,30 +150,33 @@
 .schedule-popup h4 {
   font-size: 1.4rem;
   font-family: 'Orbitron', sans-serif;
-  color: #ffdede;
+  color: #ffe3d1;
 }
 
 .schedule-popup .close-icon {
-  font-size: 1.2rem;
-  color: #fff;
+  font-size: 1.4rem;
   cursor: pointer;
+  color: #fff;
   transition: color 0.3s ease;
 }
 
 .schedule-popup .close-icon:hover {
-  color: #991f1f;
+  color: var(--accent);
 }
 
 .schedule-list {
   list-style: none;
-  padding: 15px 0;
+  margin-top: 20px;
+  padding-left: 0;
   text-align: left;
 }
 
 .schedule-list li {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-size: 1.05rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  border-left: 4px solid var(--accent);
+  padding-left: 12px;
 }
 
 /* === Facebook Button === */
@@ -182,7 +187,6 @@
   font-size: 1.1rem;
   border: none;
   border-radius: 25px;
-  cursor: pointer;
   margin-top: 20px;
   display: inline-flex;
   align-items: center;
@@ -194,45 +198,31 @@
   background-color: #0e5cc2;
 }
 
-/* === Animations === */
+/* === Popup Animation === */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* === Responsive === */
 @media (max-width: 768px) {
+  .floating-text {
+    font-size: 0.85rem;
+    top: 15px;
+    gap: 10px;
+  }
+
   .content-box {
     padding: 30px 20px;
   }
 
-  .floating-text {
-    top: 15px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 12px;
-    font-size: 0.85rem;
-    max-width: 95%;
-    padding: 0 10px;
-  }
-
   .live-title {
-    font-size: 1.8rem;
-  }
-
-  .live-subtitle {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   .go-live-button {
     font-size: 1rem;
-    padding: 12px 24px;
+    padding: 12px 26px;
   }
 
   .schedule-popup h4 {

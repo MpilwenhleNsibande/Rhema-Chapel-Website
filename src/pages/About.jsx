@@ -75,7 +75,7 @@ const About = () => {
       <section className="history-section light-background">
         <h2 className="navy-text">Our Journey</h2>
         <p className={expanded ? "expanded-text" : "collapsed-text"}>
-          {expanded ? fullText : fullText.substring(0, 992) + "..."}
+          {expanded ? fullText : fullText.substring(0, 366) + "..."}
         </p>
         <button onClick={() => setExpanded(!expanded)} className="read-more-btn">
           {expanded ? "Read Less" : "Read More"} <FaChevronRight />

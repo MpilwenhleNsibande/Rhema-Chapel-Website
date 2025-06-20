@@ -252,12 +252,12 @@
   text-shadow: none;
 }
 
-.highlight {
-  color: #ffe3d1;
-  font-family: 'Playfair Display', serif;
+.navbar-inspire .highlight {
+  color: #ffe3d1 !important; /* Brighter navy blue */
+  font-family: 'Orbitron', sans-serif;
   font-weight: 700;
-  text-shadow: none;
 }
+
 
 /* Scroll animation */
 @keyframes scrollText {
