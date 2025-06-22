@@ -257,8 +257,6 @@
   box-shadow: 0 0 10px rgba(153, 31, 31, 0.4);
   flex-shrink: 0;
   object-fit: cover;
-  background-color:#001f3f;
-
 }
 .pastor-card h4 {
   font-family: 'Playfair Display', serif;
