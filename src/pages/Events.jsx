@@ -4,13 +4,13 @@ import '../styles/Events.css';
 // Importing the images
 import celebrationImg from '../assets/fast.jpg';
 import festivalImg from '../assets/lebs.jpg';
-import communityImg from '../assets/church2.jpeg';
+import communityImg from '../assets/mamr.jpg';
 import easterImg from '../assets/church4.jpeg';
 import springImg from '../assets/mid_fast.jpg';
-import gatheringImg from '../assets/church6.jpeg';
-import joyImg from '../assets/church7.jpeg';
+import gatheringImg from '../assets/chi_out.jpg';
+import joyImg from '../assets/worker.jpg';
 import worshipImg from '../assets/intercessor.jpeg';
-import eventImg from '../assets/church9.jpeg';
+import eventImg from '../assets/pulpit_2.jpg';
 import churchImg from '../assets/Prayer Summit.png';
 
 // Events + image match
