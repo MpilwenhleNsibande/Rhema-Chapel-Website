@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../styles/Header.css";
 
-import pastor from "../assets/pastor.jpg";
+import pastor from "../assets/ps_s.jpeg";
 import church1 from "../assets/church7.jpeg";
 import church2 from "../assets/church8.jpeg";
 import church3 from "../assets/church9.jpeg";
@@ -75,9 +75,9 @@ const Header = () => {
         </div>
 
         <div className="pastor-card">
-          <img src={pastor} alt="Pastor Gospel Azuatalum" className="pastor-img" />
+          <img src={pastor} alt="Pastor Gospel Azuatalam" className="pastor-img" />
           <div>
-            <h4>Pastor Gospel Azuatalum</h4>
+            <h4>Pastor Gospel Azuatalam</h4>
             <p>Minister in Charge (MIC)</p>
           </div>
         </div>

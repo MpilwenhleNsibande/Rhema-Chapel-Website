@@ -309,3 +309,86 @@
     padding: 20px 16px;
   }
 }
+
+/* Community Installations */
+.installations-section {
+  margin: 80px auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.installations-track-wrapper {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 20px 0;
+  -webkit-overflow-scrolling: touch;
+  mask-image: linear-gradient(to right, transparent, #fff 15%, #fff 85%, transparent);
+}
+
+.installations-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  padding: 10px 40px;
+  animation: scrollLeft 30s linear infinite;
+}
+
+.installation-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 140px;
+  transition: transform 0.3s;
+}
+
+.installation-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.installation-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #001f3f;
+}
+
+.installations-section .section-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.6rem;
+  color: #001f3f;
+  margin-bottom: 30px;
+}
+
+/* Pause animation on hover */
+.installations-track-wrapper:hover .installations-track {
+  animation-play-state: paused;
+}
+
+/* Animation */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive Fixes */
+@media (max-width: 600px) {
+  .installation-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .installation-name {
+    font-size: 0.9rem;
+  }
+}

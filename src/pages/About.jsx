@@ -14,6 +14,38 @@ import hod7 from '../assets/victor.png';
 import hod8 from '../assets/mandla.png';
 import hod9 from '../assets/hod9.png';
 import hod10 from '../assets/tolu.png';
+import ch1 from '../assets/uloorin.jpg';
+import ch2 from '../assets/agege.jpg';
+import ch3 from '../assets/ojudu.png';
+import ch4 from '../assets/abuja.jpg';
+import ch5 from '../assets/oluyole.jpg';
+import ch6 from '../assets/ikorodu.jpg';
+import ch7 from '../assets/Rhema logo.png';
+import ch8 from '../assets/ojudu.png';
+import ch9 from '../assets/Rhema logo.png';
+import ch10 from '../assets/uloorin.jpg';
+import ch11 from '../assets/Rhema logo.png';
+import ch12 from '../assets/uloorin.jpg';
+import ch13 from '../assets/maryland.png';
+
+const installations = [
+  { logo: ch1, name: "Ilorin (HQ & Apostolic Center)" },
+  { logo: ch2, name: "Agege" },
+  { logo: ch3, name: "Ojudu" },
+  { logo: ch4, name: "Abuja" },
+  { logo: ch5, name: "Oluyole" },
+  { logo: ch6, name: "Ikorodu" },
+  { logo: ch7, name: "Sunnyside" },
+  { logo: ch8, name: "Lagos" },
+  { logo: ch9, name: "Ibadan" },
+  { logo: ch10, name: "Ilorin" },
+  { logo: ch11, name: "Port Harcourt" },
+  { logo: ch13, name: "Maryland" },
+  { logo: ch12, name: "London" },
+  { logo: ch8, name: "King's Lynn" },
+];
+
+
 
 const carouselImages = [hod1, hod2, hod3, hod4, hod5, hod6, hod7, hod8, hod9, hod10];
 
@@ -27,7 +59,7 @@ const departments = [
   { name: "Rhema Mass Choir", hod: "Brother Victor Agbonjaru", ahod: "None", image: hod7 },
   { name: "Technical and Media", hod: "Brother Mandla Sithole", ahod: "Sister Lebogang Matabula", image: hod8 },
   { name: "Ushering Department", hod: "Sister Tolu Akinyele", ahod: "None", image: hod10 },
-  { name: "Church Facility", hod: "Brother Akinwumi John", ahod: "None", image: hod9 },
+  { name: "Church Facility", hod: "Brother John Adewale", ahod: "None", image: hod9 },
 ];
 
 const About = () => {
@@ -96,6 +128,22 @@ const About = () => {
           ))}
         </div>
       </section>
+
+      {/* Community Installations */}
+<section className="installations-section">
+  <h2 className="section-title">Our Church Community Installations</h2>
+  <div className="installations-track-wrapper">
+    <div className="installations-track">
+      {installations.map((item, index) => (
+        <div className="installation-item" key={index}>
+          <img src={item.logo} alt={item.name} className="installation-logo" />
+          <p className="installation-name">{item.name}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };

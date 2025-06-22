@@ -61,6 +61,7 @@
   border: 4px solid #991f1f;
   object-fit: contain;
   transition: transform 0.3s ease;
+  background-color: #001f3f;
 }
 .pastor-image-glow:hover {
   transform: scale(1.05);
