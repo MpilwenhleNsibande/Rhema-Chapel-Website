@@ -68,7 +68,6 @@
   border-radius: var(--radius-lg);
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  backdrop-filter: blur(3px);
 }
 
 .banner-text h1 {
