@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaTiktok } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaTiktok, FaPhoneAlt, FaPhoneSquareAlt, FaEnvelope } from "react-icons/fa";
 import "../styles/Footer.css";
 import logo from "../assets/favicon.png";
+
 
 const Footer = () => {
   return (
@@ -54,10 +55,12 @@ const Footer = () => {
           </div>
 
           <div className="footer-contact-card">
-            <h3>Contact Us</h3>
-            <p>📞 +27 84 679 5141</p>
-            <p>📧 everincreasinwordsa@gmail.com</p>
-          </div>
+  <h3>Contact Us</h3>
+  <p><FaPhoneAlt className="footer-icon" /> +27 84 679 5141</p>
+  <p><FaPhoneSquareAlt className="footer-icon" /> +27 12 345 6789 (Landline)</p>
+  <p><FaEnvelope className="footer-icon" /> everincreasinwordministriessa@gmail.com</p>
+</div>
+
 
           <div className="footer-bottom">
             <p>© {new Date().getFullYear()} Rhema Chapel International Churches (Pretoria). All rights reserved.</p>

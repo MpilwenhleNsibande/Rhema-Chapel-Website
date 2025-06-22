@@ -431,3 +431,197 @@
     padding: 0 6px;
   }
 }
+
+.sunnyside-branch {
+  background: rgba(0, 31, 63, 0.05);
+  padding: 40px 20px;
+}
+
+.sunnyside-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sunnyside-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  border: 2px solid #001f3f;
+  border-radius: 18px;
+  padding: 20px 30px;
+  box-shadow: 0 5px 20px rgba(153, 31, 31, 0.15);
+  background: #fff;
+  color: #001f3f;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.sunnyside-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.sunnyside-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #991f1f;
+}
+
+.sunnyside-description {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #003366;
+  max-width: 600px;
+}
+
+.sunnyside-contact-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  border: 2px solid #001f3f;
+  padding: 20px 25px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(153, 31, 31, 0.15);
+}
+
+.contact-label {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #001f3f;
+  font-family: 'Playfair Display', serif;
+}
+
+.sunnyside-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sunnyside-contact-list li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #001f3f;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sunnyside-contact-list i {
+  color: #991f1f;
+  font-size: 1.1rem;
+}
+
+.sunnyside-contact-list a {
+  color: #001f3f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sunnyside-contact-list a:hover {
+  text-decoration: underline;
+}
+
+/* Logo inside contact box on far right */
+.sunnyside-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sunnyside-logo {
+  width: 130px;
+  height: auto;
+  border-radius: 12px;
+  border: 3px solid #991f1f;
+  box-shadow: 0 0 15px rgba(153, 31, 31, 0.3);
+  background-color: white;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.sunnyside-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .sunnyside-info-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 20px;
+  }
+
+  .sunnyside-contact-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .sunnyside-logo {
+    width: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sunnyside-title {
+    font-size: 1.6rem;
+  }
+
+  .sunnyside-description {
+    font-size: 1rem;
+  }
+
+  .sunnyside-logo {
+    width: 90px;
+  }
+
+  .sunnyside-contact-list li {
+    font-size: 0.95rem;
+  }
+
+  .contact-label {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .sunnyside-title {
+    font-size: 1.4rem;
+  }
+
+  .sunnyside-description {
+    font-size: 0.95rem;
+  }
+
+  .sunnyside-logo {
+    width: 80px;
+  }
+
+  .sunnyside-contact-list li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .sunnyside-title {
+    font-size: 1.2rem;
+  }
+
+  .sunnyside-description {
+    font-size: 0.9rem;
+  }
+
+  .sunnyside-logo {
+    width: 70px;
+  }
+}

@@ -7,6 +7,7 @@ import church2 from "../assets/church8.jpeg";
 import church3 from "../assets/church9.jpeg";
 import church4 from "../assets/church10.jpeg";
 import church5 from "../assets/church5.jpeg";
+import pastorWife from "../assets/hod1 (2).jpg";
 
 const images = [church1, church2, church3, church4, church5];
 
@@ -74,13 +75,27 @@ const Header = () => {
           </button>
         </div>
 
-        <div className="pastor-card">
-          <img src={pastor} alt="Pastor Gospel Azuatalam" className="pastor-img" />
-          <div>
-            <h4>Pastor Gospel Azuatalam</h4>
-            <p>Minister in Charge (MIC)</p>
-          </div>
-        </div>
+        <section className="pastors-container">
+  <h2 className="section-title">Meet Our Pastors</h2>
+
+  <div className="pastor-card">
+    <img src={pastor} alt="Pastor Gospel Azuatalam" className="pastor-img" />
+    <div>
+      <h4>Pastor Gospel Azuatalam</h4>
+      <p>Minister in Charge (MIC)</p>
+    </div>
+  </div>
+
+  <div className="pastor-card">
+    <img src={pastorWife} alt="Mrs. Mabel Azuatalam" className="pastor-img" />
+    <div>
+      <h4>Mrs. Mabel Azuatalam</h4>
+      <p>Pastor</p>
+    </div>
+  </div>
+</section>
+
+
       </div>
 
       <section className="media-display">

@@ -5,6 +5,7 @@ import "../styles/Home.css";
 import pastorImg from "../assets/Ps.jpeg";
 import bibleImg from "../assets/bible.jpg";
 import wordImg from "../assets/SMIC_2.jpg";
+import sunnysideLogo from '../assets/oluyole.jpg';
 
 const Home = () => {
   const [showPastorText, setShowPastorText] = useState(false);
@@ -82,6 +83,48 @@ const Home = () => {
           </button>
         </div>
       </section>
+
+ {/* Sunnyside Branch Section */}
+<section className="sunnyside-branch">
+  <div className="sunnyside-container">
+    <div className="sunnyside-info">
+      <h2 className="sunnyside-title">
+        <span className="highlight">Rhema Chapel</span> – Sunnyside Installation
+      </h2>
+      <p className="sunnyside-description">
+        Sunnyside and surroundings, join our Sunnyside community for spirit-filled worship and fellowship in the heart of Pretoria.
+      </p>
+
+      <div className="sunnyside-contact-box">
+  
+        <div className="sunnyside-contact-info">
+          <p className="contact-label">For more information, contact:</p>
+          <ul className="sunnyside-contact-list">
+            <li>
+              <i className="fas fa-user"></i>
+              Mrs Lenah Nkuna
+            </li>
+            <li>
+              <i className="fas fa-phone"></i>
+              Mobile: <a href="tel:+27821234567">+27 83 460 3882</a>
+            </li>
+            <li>
+              <i className="fas fa-phone-volume"></i>
+              Landline: <a href="tel:+27123456789">+27 12 345 6789</a>
+            </li>
+          </ul>
+        </div>
+        <div className="sunnyside-logo-container">
+          <img
+            src={sunnysideLogo}
+            alt="Rhema Sunnyside Branch Logo"
+            className="sunnyside-logo"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     </div>
   );
 };
