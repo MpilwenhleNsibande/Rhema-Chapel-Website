@@ -50,8 +50,8 @@ const Home = () => {
         <h2>Our Weekly Services</h2>
         <div className="services-grid">
           {[
-            { icon: FaChurch, title: "Sunday Celebration", time: "Sundays · 10h00–12h00" },
-            { icon: FaChalkboardTeacher, title: "YMTS (Young Minister School)", time: "Wednesdays · 17h30–19h30" },
+            { icon: FaChurch, title: "Sunday Celebration", time: "Sundays · 10h30–12h30" },
+            { icon: FaChalkboardTeacher, title: "YMTS (Young Minister's Teaching School)", time: "Wednesdays · 17h30–19h30" },
             { icon: FaPrayingHands, title: "All‑Night Prayer", time: "Fridays · 22h00–03h00" },
             { icon: FaHandsHelping, title: "Victory Hour Prayer", time: "Fridays · 17h30–19h30" },
           ].map(({ icon: Icon, title, time }, i) => (

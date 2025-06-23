@@ -42,7 +42,7 @@ const GoLiveButton = () => {
           <FaBroadcastTower /> Rhema Live Stream
         </h1>
         <p className="live-subtitle">
-          "Where the Spirit of the Lord is, there is liberty" — 2 Cor 3:17
+          Experience the power of the spoken word "RHEMA"
         </p>
 
         <button
@@ -64,7 +64,7 @@ const GoLiveButton = () => {
             <ul className="schedule-list">
               <li>
                 <FaPrayingHands /> <strong>Sunday Celebration Service</strong>
-                <br /> Sunday 10h00 - 12h00
+                <br /> Sunday 10h30 - 12h30
               </li>
               <li>
                 <FaClock /> <strong>Young Ministers Teaching School</strong>
