@@ -5,7 +5,7 @@ import "../styles/Home.css";
 import pastorImg from "../assets/Ps.jpeg";
 import bibleImg from "../assets/bible.jpg";
 import wordImg from "../assets/SMIC_2.jpg";
-import sunnysideLogo from '../assets/oojudu.png';
+import sunnysideLogo from '../assets/Rhema logo-2.png';
 
 const Home = () => {
   const [showPastorText, setShowPastorText] = useState(false);
