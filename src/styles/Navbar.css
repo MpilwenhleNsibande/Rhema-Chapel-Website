@@ -35,10 +35,10 @@
 }
 
 .logo {
-  width: 80px;
+  width: 120px;
   height: auto;
   border-radius: 12px;
-  border: 2px solid #991f1f; /* Dodger Blue */
+  
   transition: transform 0.3s ease;
 }
 

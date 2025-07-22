@@ -32,9 +32,9 @@ const GoLiveButton = () => {
       <div className="live-overlay" />
 
       <div className="floating-text">
-        <span>✨ Experience God’s Presence</span>
-        <span>🙌 Be Part of a Global Community</span>
-        <span>📡 Join Us Online, Wherever You Are</span>
+        <span>Experience God’s Presence</span>
+        <span>Be Part of a Global Community</span>
+        <span>Join Us Online, Wherever You Are</span>
       </div>
 
       <div className="content-box">

@@ -295,7 +295,7 @@
   box-shadow:
     0 15px 40px rgba(0, 31, 63, 0.2);
   overflow: hidden;
-  border: 5px solid #001f3f;
+  
   transition: transform 0.4s ease;
 }
 .carousel-image {
@@ -316,7 +316,7 @@
   overflow: hidden;
   box-shadow:
     0 15px 40px rgba(153, 31, 31, 0.3);
-  border: 5px solid #991f1f;
+  
 }
 .video-frame {
   position: relative;
