@@ -12,15 +12,15 @@ import joyImg from '../assets/worker.jpg';
 import worshipImg from '../assets/intercessor.jpeg';
 import eventImg from '../assets/pulpit_2.jpg';
 import churchImg from '../assets/Prayer Summit.png';
-import gal1 from '../assets/Bannner.jpg';
-import gal2 from '../assets/Poster.jpg';
-import gal3 from "../assets/Br.jpg";
-import gal4 from '../assets/Lib.jpg';
-import gal5 from '../assets/Sit.jpg';
-import gal6 from '../assets/Wom_St.jpg';
-import gal7 from '../assets/youth.jpeg';
-import gal10 from '../assets/youth1.jpeg';
-import gal9 from '../assets/view.jpg';
+import gal11 from '../assets/Bannner.jpg';
+import gal22 from '../assets/Poster.jpg';
+import gal33 from "../assets/Br.jpg";
+import gal44 from '../assets/Lib.jpg';
+import gal55 from '../assets/Sit.jpg';
+import gal66 from '../assets/Wom_St.jpg';
+import gal77 from '../assets/youth.jpeg';
+import gal88 from '../assets/youth1.jpeg';
+import gal99 from '../assets/view.jpg';
 
 // Events + image match
 const events = [
@@ -36,7 +36,7 @@ const events = [
   { title: "Prayer Summit", image: churchImg }
 ];
 
-const galleryImages = [gal1, gal2, gal3, gal4, gal5, gal6, gal7, gal10, gal9];
+const galleryImages = [gal11, gal22, gal33, gal44, gal55, gal66, gal77, gal88, gal99];
 
 const Events = () => {
   return (
@@ -58,7 +58,7 @@ const Events = () => {
 
         {/* Gallery Section */}
         <div className="gallery-section">
-  <h2 className="section-title">Gallery</h2>
+  <h2 className="section-title">Gallery 2</h2>
   <div className="gallery-container">
     <div className="gallery-track">
       {galleryImages.map((image, index) => (
