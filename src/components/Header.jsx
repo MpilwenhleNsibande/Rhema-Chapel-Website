@@ -2,19 +2,19 @@ import React, { useState, useEffect, useRef } from "react";
 import "../styles/Header.css";
 
 import pastor from "../assets/ps_s.jpeg";
-import church1 from "../assets/Sit.jpg";
-import church2 from "../assets/Wom.jpg";
-import church3 from "../assets/Worship.jpg";
-import church4 from "../assets/Wom_Wor2.jpg";
-import church5 from "../assets/Child.jpg";
-import church6 from "../assets/MamR2.jpg";
-import church7 from "../assets/Sit2.jpg";
-import church8 from "../assets/WomWor.jpg";
-import church9 from "../assets/Choir_j.jpg";
-import church10 from "../assets/Att.jpg";
+import church11 from "../assets/Sit.jpg";
+import church22 from "../assets/Wom.jpg";
+import church33 from "../assets/Worship.jpg";
+import church44 from "../assets/Wom_Wor2.jpg";
+import church55 from "../assets/Child.jpg";
+import church66 from "../assets/MamR2.jpg";
+import church77 from "../assets/Sit2.jpg";
+import church88 from "../assets/WomWor.jpg";
+import church99 from "../assets/Choir_j.jpg";
+import church101 from "../assets/Att.jpg";
 import pastorWife from "../assets/hod1 (2).jpg";
 
-const images = [church1, church2, church3, church4, church5, church6, church7, church8, church9, church10];
+const images = [church11, church22, church33, church44, church55, church66, church77, church88, church99, church101];
 
 const Header = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -116,7 +116,7 @@ const Header = () => {
   <div className="video-frame">
     <iframe
       className="church-video"
-      src="https://www.youtube.com/embed/cx0f4RDFF7g"
+      src=""
       title="Church video preview"
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
