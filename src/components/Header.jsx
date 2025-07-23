@@ -2,14 +2,19 @@ import React, { useState, useEffect, useRef } from "react";
 import "../styles/Header.css";
 
 import pastor from "../assets/ps_s.jpeg";
-import church1 from "../assets/church7.jpeg";
-import church2 from "../assets/church8.jpeg";
-import church3 from "../assets/church9.jpeg";
-import church4 from "../assets/church10.jpeg";
-import church5 from "../assets/church5.jpeg";
+import church1 from "../assets/Sit.jpg";
+import church2 from "../assets/Wom.jpg";
+import church3 from "../assets/Worship.jpg";
+import church4 from "../assets/Wom_Wor2.jpg";
+import church5 from "../assets/Child.jpg";
+import church6 from "../assets/MamR2.jpg";
+import church7 from "../assets/Sit2.jpg";
+import church8 from "../assets/WomWor.jpg";
+import church9 from "../assets/Choir_j.jpg";
+import church10 from "../assets/Att.jpg";
 import pastorWife from "../assets/hod1 (2).jpg";
 
-const images = [church1, church2, church3, church4, church5];
+const images = [church1, church2, church3, church4, church5, church6, church7, church8, church9, church10];
 
 const Header = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -21,7 +26,7 @@ const Header = () => {
     // Image carousel every 4s
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 4000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -108,26 +113,18 @@ const Header = () => {
         </div>
 
         <div className="video-section">
-          <div className="video-frame">
-            <video
-              ref={videoRef}
-              className="church-video"
-              src="https://www.w3schools.com/html/mov_bbb.mp4"
-              controls={isPlaying}
-              aria-label="Church video preview"
-            />
-            {!isPlaying && (
-              <button
-                className="video-play"
-                onClick={handlePlay}
-                aria-label="Play church video"
-                title="Play video"
-              >
-                ▶
-              </button>
-            )}
-          </div>
-        </div>
+  <div className="video-frame">
+    <iframe
+      className="church-video"
+      src="https://www.youtube.com/embed/cx0f4RDFF7g"
+      title="Church video preview"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  </div>
+</div>
+
       </section>
 
       <div className="scroll-indicator" role="presentation" aria-hidden="true">

@@ -50,12 +50,12 @@ const Navbar = () => {
         <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
           <li>
             <Link to="/" onClick={handleMenuItemClick}>
-              Home
+              HOME
             </Link>
           </li>
           <li>
             <Link to="/about" onClick={handleMenuItemClick}>
-              About
+              ABOUT
             </Link>
           </li>
 
@@ -68,18 +68,18 @@ const Navbar = () => {
               className="dropdown"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
-              <span>EIWM Arms ▾</span>
+              <span>EIWM ARMS ▾</span>
             </div>
 
             <ul className={`dropdown-menu ${dropdownOpen ? "open" : ""}`}>
               <li>
                 <Link to="/eiwm/rhema-chapel" onClick={handleMenuItemClick}>
-                  Rhema Chapel Churches
+                  RHEMA CHAPEL CHURCHES
                 </Link>
               </li>
               <li>
                 <Link to="/eiwm/ymts" onClick={handleMenuItemClick}>
-                  Young Minister Teaching School (YMTS)
+                  YOUNG MINISTER'S TEACHING SCHOOL (YMTS)
                 </Link>
               </li>
               <li>
@@ -89,17 +89,17 @@ const Navbar = () => {
               </li>
               <li>
                 <Link to="/eiwm/campus-fellowship" onClick={handleMenuItemClick}>
-                  Campus Fellowship
+                  CAMPUS FELLOWSHIP
                 </Link>
               </li>
               <li>
                 <Link to="/eiwm/preschools" onClick={handleMenuItemClick}>
-                  Pre-Schools
+                  PRE-SCHOOLS
                 </Link>
               </li>
               <li>
                 <Link to="/eiwm/dormitory" onClick={handleMenuItemClick}>
-                  Dormitory Classes
+                  DORMITORY CLASSES
                 </Link>
               </li>
             </ul>
@@ -107,17 +107,17 @@ const Navbar = () => {
 
           <li>
             <Link to="/events" onClick={handleMenuItemClick}>
-              Events
+              EVENTS
             </Link>
           </li>
           <li>
             <Link to="/sermons" onClick={handleMenuItemClick}>
-              Sermons
+              SERMONS
             </Link>
           </li>
           <li>
             <Link to="/goLive" onClick={handleMenuItemClick}>
-              Go Live
+              GO LIVE
             </Link>
           </li>
 

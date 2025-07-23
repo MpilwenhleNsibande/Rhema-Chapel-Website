@@ -110,7 +110,7 @@ const Home = () => {
             </li>
             <li>
               <i className="fas fa-phone-volume"></i>
-              Landline: <a href="tel:+27123456789">+27 12 345 6789</a>
+              Landline: <a href="tel:+27123456789">012 304 0421</a>
             </li>
           </ul>
         </div>

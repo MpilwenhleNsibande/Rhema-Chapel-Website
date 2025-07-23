@@ -12,6 +12,15 @@ import joyImg from '../assets/worker.jpg';
 import worshipImg from '../assets/intercessor.jpeg';
 import eventImg from '../assets/pulpit_2.jpg';
 import churchImg from '../assets/Prayer Summit.png';
+import gal1 from '../assets/Bannner.jpg';
+import gal2 from '../assets/Poster.jpg';
+import gal3 from "../assets/Br.jpg";
+import gal4 from '../assets/Lib.jpg';
+import gal5 from '../assets/Sit.jpg';
+import gal6 from '../assets/Wom_St.jpg';
+import gal7 from '../assets/youth.jpeg';
+import gal8 from '../assets/youth1.jpeg';
+import gal9 from '../assets/view.jpg';
 
 // Events + image match
 const events = [
@@ -26,6 +35,8 @@ const events = [
   { title: "Pulpit Exchange", image: eventImg },
   { title: "Prayer Summit", image: churchImg }
 ];
+
+const galleryImages = [gal1, gal2, gal3, gal4, gal5, gal6, gal7, gal8, gal9];
 
 const Events = () => {
   return (
@@ -47,17 +58,17 @@ const Events = () => {
 
         {/* Gallery Section */}
         <div className="gallery-section">
-          <h2 className="section-title">Gallery</h2>
-          <div className="gallery-container">
-            <div className="gallery-track">
-              {events.map((event, index) => (
-                <div className="gallery-slide" key={index}>
-                  <img src={event.image} alt={`Gallery ${index + 1}`} />
-                </div>
-              ))}
-            </div>
-          </div>
+  <h2 className="section-title">Gallery</h2>
+  <div className="gallery-container">
+    <div className="gallery-track">
+      {galleryImages.map((image, index) => (
+        <div className="gallery-slide" key={index}>
+          <img src={image} alt={`Gallery ${index + 1}`} />
         </div>
+      ))}
+    </div>
+  </div>
+</div>
       </div>
     </div>
   );

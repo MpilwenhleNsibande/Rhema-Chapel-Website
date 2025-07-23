@@ -10,7 +10,6 @@ const YMTS = () => {
         <img src={ymtsImage} alt="Young Minister Teaching School" className="banner-image" />
         <div className="banner-text">
           <h1>Young Minister's Teaching School (YMTS)</h1>
-          
         </div>
       </div>
 
@@ -74,9 +73,9 @@ const YMTS = () => {
 
         <h2>Enroll Today</h2>
         <p>
-          Join YMTS every Wednesday (17h30 - 18h30) at Rhema Chapel International Churches (Pretoria) Auditorium and start your journey into a fulfilling ministry calling.
+          Join YMTS every Wednesday (17h30 - 19h30) at Rhema Chapel International Churches (Pretoria) Auditorium and start your journey into a fulfilling ministry calling.
 
-          <strong>YMTS is open to anyone, from any denomination, who is interested in ministry. You do not need to be part of Rhema Chapel</strong>
+          <strong>YMTS is open to anyone, from any denomination, who is interested in ministry. You do not need to be part of Rhema Chapel.</strong>
         </p>
 
         <div className="cta-section">

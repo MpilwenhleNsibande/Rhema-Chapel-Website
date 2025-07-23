@@ -451,7 +451,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px;
-  border: 2px solid #001f3f;
+  
   border-radius: 18px;
   padding: 20px 30px;
   box-shadow: 0 5px 20px rgba(153, 31, 31, 0.15);
@@ -485,7 +485,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  border: 2px solid #001f3f;
+  
   padding: 20px 25px;
   border-radius: 18px;
   background: #fff;
