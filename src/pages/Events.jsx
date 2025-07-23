@@ -16,7 +16,7 @@ import gal11 from '../assets/Bannner.jpg';
 import gal22 from '../assets/Poster.jpg';
 import gal33 from "../assets/Br.jpg";
 import gal44 from '../assets/Lib.jpg';
-import gal55 from '../assets/Sit.jpg';
+import gal55 from '../assets/sit.jpg';
 import gal66 from '../assets/Wom_St.jpg';
 import gal77 from '../assets/youth.jpeg';
 import gal88 from '../assets/youth1.jpeg';
