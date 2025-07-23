@@ -19,7 +19,7 @@ import gal4 from '../assets/Lib.jpg';
 import gal5 from '../assets/Sit.jpg';
 import gal6 from '../assets/Wom_St.jpg';
 import gal7 from '../assets/youth.jpeg';
-import gal8 from '../assets/youth1.jpeg';
+import gal10 from '../assets/youth1.jpeg';
 import gal9 from '../assets/view.jpg';
 
 // Events + image match
@@ -36,7 +36,7 @@ const events = [
   { title: "Prayer Summit", image: churchImg }
 ];
 
-const galleryImages = [gal1, gal2, gal3, gal4, gal5, gal6, gal7, gal8, gal9];
+const galleryImages = [gal1, gal2, gal3, gal4, gal5, gal6, gal7, gal10, gal9];
 
 const Events = () => {
   return (
