@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "../styles/Header.css";
 
 import pastor from "../assets/ps_s.jpeg";
-import church11 from "../assets/Sit.jpg";
+import church11 from "../assets/sit.jpg";
 import church22 from "../assets/Wom.jpg";
 import church33 from "../assets/Worship.jpg";
 import church44 from "../assets/Wom_Wor2.jpg";
