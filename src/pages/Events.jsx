@@ -58,7 +58,7 @@ const Events = () => {
 
         {/* Gallery Section */}
         <div className="gallery-section">
-  <h2 className="section-title">Gallery 2</h2>
+  <h2 className="section-title">Gallery</h2>
   <div className="gallery-container">
     <div className="gallery-track">
       {galleryImages.map((image, index) => (

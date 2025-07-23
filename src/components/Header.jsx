@@ -116,7 +116,7 @@ const Header = () => {
   <div className="video-frame">
     <iframe
       className="church-video"
-      src=""
+      src="https://youtu.be/cx0f4RDFF7g"
       title="Church video preview"
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
