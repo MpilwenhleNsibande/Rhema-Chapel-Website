@@ -10,7 +10,7 @@ import church55 from "../assets/Child.jpg";
 import church66 from "../assets/MamR2.jpg";
 import church77 from "../assets/Sit2.jpg";
 import church88 from "../assets/WomWor.jpg";
-import church99 from "../assets/Choir_j.jpg";
+import church99 from "../assets/Choir_J.jpg";
 import church101 from "../assets/Att.jpg";
 import pastorWife from "../assets/hod1 (2).jpg";
 
