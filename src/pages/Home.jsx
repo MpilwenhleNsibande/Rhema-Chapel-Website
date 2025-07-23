@@ -3,7 +3,6 @@ import { FaChurch, FaPrayingHands, FaGlobe, FaHandsHelping, FaChalkboardTeacher 
 import Header from "../components/Header";
 import "../styles/Home.css";
 import pastorImg from "../assets/Ps.jpeg";
-import bibleImg from "../assets/bible.jpg";
 import wordImg from "../assets/SMIC_2.jpg";
 import sunnysideLogo from '../assets/Rhema logo-2.png';
 
