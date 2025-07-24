@@ -96,7 +96,7 @@ const Events = () => {
         {/* Video Section */}
 <div className="videos-page">
   <div className="videos-container">
-    <h2 className="section-title">Video Highlights from Our Services</h2>
+    <h2 className="section-title">Rhema Chapel (Pta) at a glance</h2>
     <div className="videos-grid">
       {videos.map((video, index) => (
         <div
