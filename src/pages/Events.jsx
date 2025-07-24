@@ -1,7 +1,8 @@
-import React from 'react';
-import '../styles/Events.css';
+import React, { useState } from "react";
+import Modal from "react-modal";
+import "../styles/Events.css";
 
-// Importing the images
+// Importing images
 import celebrationImg from '../assets/fast.jpg';
 import festivalImg from '../assets/lebs.jpg';
 import communityImg from '../assets/mamr.jpg';
@@ -12,6 +13,7 @@ import joyImg from '../assets/worker.jpg';
 import worshipImg from '../assets/intercessor.jpeg';
 import eventImg from '../assets/pulpit_2.jpg';
 import churchImg from '../assets/Prayer Summit.png';
+
 import gal11 from '../assets/Bannner.jpg';
 import gal22 from '../assets/Poster.jpg';
 import gal33 from "../assets/Br.jpg";
@@ -22,7 +24,13 @@ import gal77 from '../assets/youth.jpeg';
 import gal88 from '../assets/youth1.jpeg';
 import gal99 from '../assets/view.jpg';
 
-// Events + image match
+import Vid1 from "../assets/Vid_1.mp4";
+import Vid2 from "../assets/Vid_2.mp4";
+import Vid3 from "../assets/Vid_3.mp4";
+import Vid4 from "../assets/Vid_4.mp4";
+import Vid5 from "../assets/Vid_5.mp4";
+import Vid7 from "../assets/Vid_7.mp4";
+
 const events = [
   { title: "January Fast", image: celebrationImg },
   { title: "Children's Church Teachers' Workshop", image: festivalImg },
@@ -37,14 +45,29 @@ const events = [
 ];
 
 const galleryImages = [gal11, gal22, gal33, gal44, gal55, gal66, gal77, gal88, gal99];
+const videos = [Vid1, Vid2, Vid3, Vid4, Vid5, Vid7];
 
 const Events = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeVideo, setActiveVideo] = useState(null);
+
+  const openModal = (videoSrc) => {
+    setActiveVideo(videoSrc);
+    setIsOpen(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeModal = () => {
+    setActiveVideo(null);
+    setIsOpen(false);
+    document.body.style.overflow = "auto";
+  };
+
   return (
     <div className="events-page">
       <div className="events-container">
         <h2 className="section-title">Rhema Chapel Yearly Events</h2>
 
-        {/* Events grid */}
         <div className="events-grid">
           {events.map((event, index) => (
             <div className="event-card" key={index}>
@@ -56,19 +79,66 @@ const Events = () => {
           ))}
         </div>
 
-        {/* Gallery Section */}
+        {/* Gallery */}
         <div className="gallery-section">
-  <h2 className="section-title">Gallery</h2>
-  <div className="gallery-container">
-    <div className="gallery-track">
-      {galleryImages.map((image, index) => (
-        <div className="gallery-slide" key={index}>
-          <img src={image} alt={`Gallery ${index + 1}`} />
+          <h2 className="section-title">Gallery</h2>
+          <div className="gallery-container">
+            <div className="gallery-track">
+              {galleryImages.map((image, index) => (
+                <div className="gallery-slide" key={index}>
+                  <img src={image} alt={`Gallery ${index + 1}`} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Video Section */}
+<div className="videos-page">
+  <div className="videos-container">
+    <h2 className="section-title">Video Highlights from Our Services</h2>
+    <div className="videos-grid">
+      {videos.map((video, index) => (
+        <div
+          className="video-card"
+          key={index}
+          onClick={() => openModal(video)}
+          style={{ cursor: "pointer" }}
+        >
+          <video
+            src={video}
+            muted
+            autoPlay
+            loop
+            playsInline
+            preload="metadata"
+            className="gallery-video"
+          />
         </div>
       ))}
     </div>
   </div>
 </div>
+
+
+        {/* Modal */}
+        <Modal
+          isOpen={isOpen}
+          onRequestClose={closeModal}
+          contentLabel="Video Modal"
+          className="video-modal"
+          overlayClassName="video-overlay"
+          ariaHideApp={false}
+        >
+          <button onClick={closeModal} className="close-btn">×</button>
+          <video
+            src={activeVideo}
+            controls
+            autoPlay
+            playsInline
+            className="modal-video"
+          />
+        </Modal>
       </div>
     </div>
   );

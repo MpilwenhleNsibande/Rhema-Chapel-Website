@@ -20,6 +20,8 @@
   padding: 60px 20px;
   color: var(--text-main);
   font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* === Container === */
@@ -206,3 +208,91 @@
     font-size: 1.4rem;
   }
 }
+/* === Videos Section === */
+.videos-page {
+  background: var(--background);
+  margin: 0;
+  padding: 0;
+  color: var(--text-main);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.videos-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.videos-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 60px;
+  padding: 0 12px;
+  overflow: hidden;
+}
+
+/* === Video Cards === */
+.video-card {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--soft-shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.video-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* === Video Element === */
+.gallery-video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+
+/* === Tablet Screens: 2-column layout === */
+@media (min-width: 600px) and (max-width: 899px) {
+  .videos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+    gap: 24px;
+    justify-items: center;
+  }
+
+  .video-card {
+    max-width: 240px;
+  }
+}
+
+/* === Large Screens: One row, multiple columns === */
+@media (min-width: 900px) {
+  .videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px;
+    justify-items: center;
+  }
+
+  .video-card {
+    max-width: 180px;
+  }
+}
+
+
+
+
+
+
+
+
