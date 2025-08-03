@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/About.css";
 import founderImg from "../assets/reverend.jpg";
-import { FaChevronRight } from "react-icons/fa";
+import { FaChevronRight, FaCross, FaSeedling, FaStar, FaHeart, FaBookOpen, FaShieldAlt, FaFire } from "react-icons/fa";
 
 // Head of Department Images
 import hod1 from '../assets/mam.png'; 
@@ -113,6 +113,44 @@ const About = () => {
           {expanded ? "Read Less" : "Read More"} <FaChevronRight />
         </button>
       </section>
+
+
+<section className="beliefs-section">
+  <h2 className="section-title navy-text">Our Beliefs</h2>
+  <div className="beliefs-list">
+    <div className="belief-card animate-slide-up">
+      <FaCross className="belief-icon" />
+      <p><span className="belief-dropcap">S</span>alvation is the beginning of our journey with God.</p>
+    </div>
+    <div className="belief-card animate-slide-up delay-1">
+      <FaSeedling className="belief-icon" />
+      <p><span className="belief-dropcap">S</span>teadfastness is our Christian commitment.</p>
+    </div>
+    <div className="belief-card animate-slide-up delay-2">
+      <FaStar className="belief-icon" />
+      <p><span className="belief-dropcap">S</span>econd Coming of Christ is our living hope and nature of our expectation.</p>
+    </div>
+    <div className="belief-card animate-slide-up delay-3">
+      <FaHeart className="belief-icon" />
+      <p><span className="belief-dropcap">S</span>oul-winning is our supreme task.</p>
+    </div>
+    <div className="belief-card animate-slide-up delay-4">
+      <FaBookOpen className="belief-icon" />
+      <p><span className="belief-dropcap">S</span>tudying the Word is our spiritual culture.</p>
+    </div>
+    <div className="belief-card animate-slide-up delay-5">
+      <FaShieldAlt className="belief-icon" />
+      <p><span className="belief-dropcap">S</span>eparation is our attitude towards the world.</p>
+    </div>
+    <div className="belief-card animate-slide-up delay-6">
+      <FaFire className="belief-icon" />
+      <p><span className="belief-dropcap">S</span>pirit-filled is our mode of worship.</p>
+    </div>
+  </div>
+</section>
+
+
+
 
       {/* Departments */}
       <section className="departments-section">
