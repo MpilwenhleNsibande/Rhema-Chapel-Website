@@ -13,6 +13,8 @@ import church88 from "../assets/WomWor.jpg";
 import church99 from "../assets/Choir_J.jpg";
 import church101 from "../assets/Att.jpg";
 import pastorWife from "../assets/hod1 (2).jpg";
+import churchVideo from "../assets/Intro.mp4";
+
 
 const images = [church11, church22, church33, church44, church55, church66, church77, church88, church99, church101];
 
@@ -112,18 +114,20 @@ const Header = () => {
           />
         </div>
 
-        <div className="video-section">
-  <div className="video-frame">
-    <iframe
-      className="church-video"
-      src="https://www.youtube.com/embed/cx0f4RDFF7g"
-      title="Church video preview"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
-  </div>
-</div>
+                <div className="video-section">
+          <div className="video-frame">
+            <video
+              className="church-video"
+              ref={videoRef}
+              controls
+              onPlay={handlePlay}
+            >
+              <source src={churchVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
 
       </section>
 
